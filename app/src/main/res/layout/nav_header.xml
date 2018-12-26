@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="176dp">
+
+  <ImageView
+      android:layout_width="100dp"
+      android:layout_height="100dp"
+      android:id="@+id/app_image"
+      android:layout_centerVertical="true"
+      android:layout_marginStart="20dp"
+      android:layout_marginTop="40dp"
+      android:src="@drawable/cryptography"/>
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_toEndOf="@id/app_image"
+      android:layout_marginTop="70dp"
+      android:layout_marginStart="19dp"
+      android:text="@string/app_name"
+      android:textColor="#FFFFFF"
+      android:textSize="25sp" />
+
+</RelativeLayout>

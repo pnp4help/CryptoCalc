@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/plaintext_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:text="Plaintext/Ciphertext :"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+      <EditText
+          android:id="@+id/plaintext_input"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/plaintext_label"
+          android:hint="Enter Plaintext/Ciphertext Value"
+          android:textAllCaps="true"
+          android:inputType="textCapCharacters" />
+
+
+    <TextView
+        android:id="@+id/key_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/plaintext_input"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:text="Key :"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+      <EditText
+          android:id="@+id/key_input"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/key_label"
+          android:hint="Enter Key Value"
+          android:inputType="number" />
+
+    <Button
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:id="@+id/button_encryption"
+        android:layout_width="155dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/key_input"
+        android:layout_marginTop="5dp"
+        android:text="ENCRYPTION" />
+
+    <Button
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:id="@+id/button_decryption"
+        android:layout_width="155dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/key_input"
+        android:layout_marginTop="5dp"
+        android:text="DECRYPTION" />
+
+    <TextView
+        android:id="@+id/output"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_encryption"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="20dp"
+        android:text="Output :"
+        android:textColor="#000000"
+        android:textSize="17sp" />
+
+    <ImageView
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_below="@id/output"
+        android:layout_marginTop="35dp"
+        android:id="@+id/swap"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/swap"/>
+  </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/symtext1"
+                android:layout_marginTop="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Symmetric Algorithms"
+                android:textColor="#000000"
+                android:textSize="23sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_1"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/symtext1"
+                android:layout_marginStart="20dp"
+                android:gravity="center"
+                android:text="Additive Cipher"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txt_2"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/txt_1"
+                android:layout_marginStart="20dp"
+                android:text="Multiplicative Cipher"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txt_3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/txt_2"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="20dp"
+                android:text="Affine Cipher"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txt_4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/txt_3"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="20dp"
+                android:text="Auto Key Cipher"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txt_5"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/txt_4"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="4dp"
+                android:text="Play-Fair Cipher"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txt_6"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/txt_5"
+                android:layout_marginStart="20dp"
+                android:text="Vigenere Cipher"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txt_7"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/txt_6"
+                android:layout_marginStart="20dp"
+                android:text="Hill Cipher"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+
+
+            <TextView
+                android:id="@+id/asym_txt"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/txt_7"
+                android:text="Asymmetric Algorithms"
+                android:textColor="#000000"
+                android:textSize="23sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_12"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/asym_txt"
+                android:layout_marginStart="20dp"
+                android:gravity="center"
+                android:text="Diffie Hellman Cipher"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_marginTop="4dp"
+                android:id="@+id/txt_13"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/txt_12"
+                android:layout_marginStart="20dp"
+                android:text="RSA Cipher"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/hash_txt"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/txt_13"
+                android:text="Hashing Algorithms"
+                android:textColor="#000000"
+                android:textSize="23sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_15"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="4dp"
+                android:layout_below="@+id/hash_txt"
+                android:layout_marginStart="20dp"
+                android:gravity="center"
+                android:text="SHA-1"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/txt_18"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/txt_15"
+                android:layout_marginStart="20dp"
+                android:text="MD5"
+                android:layout_marginTop="4dp"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/txt_19"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/txt_18"
+                android:layout_marginStart="20dp"
+                android:text="SHA-256"
+                android:layout_marginTop="4dp"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txt_20"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/txt_19"
+                android:layout_marginStart="20dp"
+                android:text="SHA-512"
+                android:layout_marginTop="4dp"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txt_21"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/txt_20"
+                android:layout_marginStart="20dp"
+                android:text="SHA-384"
+                android:layout_marginTop="4dp"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txt_22"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/txt_21"
+                android:layout_marginStart="20dp"
+                android:text="SHA-224"
+                android:layout_marginTop="4dp"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/other_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/txt_22"
+                android:layout_marginTop="4dp"
+                android:text="Other Algorithms"
+                android:textColor="#000000"
+                android:textSize="23sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_27"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="4dp"
+                android:layout_below="@+id/other_txt"
+                android:layout_marginStart="20dp"
+                android:gravity="center"
+                android:text="GCD Euclidian"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txt_28"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="4dp"
+                android:layout_below="@+id/txt_27"
+                android:layout_marginStart="20dp"
+                android:text="Modulus"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txt_29"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/txt_28"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="4dp"
+                android:text="Prime"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txt_30"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/txt_29"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="4dp"
+                android:text="Multipliactive Inverse"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txt_31"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/txt_30"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="4dp"
+                android:text="Miller Rabin Inverse"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txt_32"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/txt_31"
+                android:layout_marginStart="20dp"
+                android:text="Chinese Remainder"
+                android:layout_marginTop="4dp"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txt_33"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/txt_32"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="20dp"
+                android:text="Square and Multiply"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+        </RelativeLayout>
+    </ScrollView>
+</FrameLayout>

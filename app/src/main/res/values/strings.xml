@@ -1,0 +1,7 @@
+<resources>
+  <string name="testTitle"><font color="#FFFFFF">Extra</font></string>
+  <string name="app_name">CryptoCalc</string>
+  <string name="navigation_drawer_open">Open navigation drawer</string>
+  <string name="navigation_drawer_close">Close navigation drawer</string>
+
+</resources>
