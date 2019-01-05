@@ -15,6 +15,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.math.BigInteger;
 import java.util.Objects;
 
 public class Oth_multiplicative_inverse_fragment extends Fragment {
@@ -22,6 +23,7 @@ public class Oth_multiplicative_inverse_fragment extends Fragment {
     TextView temp;
     EditText num1_et,num2_et;
     long num1,num2;
+    // BigInteger num1,num2;
 
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         getActionBar().setTitle("Multiplicative Inverse");
