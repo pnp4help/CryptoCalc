@@ -36,8 +36,9 @@ public class Sym_Affine_Fragment extends Fragment {
 
         input_et=(EditText)view.findViewById(R.id.plaintext_input);
         input_et.setFilters(new InputFilter[]{new InputFilter.AllCaps()});
+
         input_k1=(EditText)view.findViewById(R.id.key_input_1);
-        InputFilterMinMax filter = new InputFilterMinMax("0", "26") {};
+        InputFilterMinMax filter = new InputFilterMinMax("0", "25") {};
         input_k1.setFilters(new InputFilter[]{filter});
         input_k2=(EditText)view.findViewById(R.id.key_input_2);
         input_k2.setFilters(new InputFilter[]{filter});
@@ -48,24 +49,41 @@ public class Sym_Affine_Fragment extends Fragment {
             @Override
             public void onClick(View view) {
 
-
                 if(input_et.getText().toString().equals("")||input_k1.getText().toString().equals("")||input_k2.getText().toString().equals("")){
                     Toast.makeText(getContext(),"Please Enter Appropriate Value",Toast.LENGTH_SHORT).show();
                 }
+                else if(!input_et.getText().toString().matches("[A-Z]+"))
+                    Toast.makeText(getContext(), "Only Alphabets are allowed ", Toast.LENGTH_SHORT).show();
                 else {
                     String inp=input_et.getText().toString();
                     int k1=Integer.valueOf(input_k1.getText().toString());
                     int k2=Integer.valueOf(input_k2.getText().toString());
                     String temp="";
 
-                    for (int i = 0; i < inp.length(); i++)
-                    {
-                        temp = temp + (char) ((((k1 * inp.charAt(i)) + k2) % 26) + 65);
-                    }
-                    copy=temp;
-                    output_tv.setText("CipherText : "+copy);
-                }
+                    int k1_inv=0,flag=0;
 
+                    for (int i = 0; i < 26; i++)
+                    {
+                        flag = (k1 * i) % 26;
+                        if (flag == 1)
+                        {
+                            k1_inv = i;
+                        }
+                    }
+                    
+                    if(k1_inv == 0){
+                        output_tv.setText("Enter another key. Multiplicative inverse not possible");
+                    }
+                    else{
+                        for (int i = 0; i < inp.length(); i++)
+                        {
+                            temp = temp + (char) ((((k1 * (inp.charAt(i) - 65)) + k2) % 26) + 65);
+                        }
+                        copy=temp;
+                        output_tv.setText("CipherText : " + copy);
+                    }
+
+                }
             }
         });
 
@@ -74,10 +92,11 @@ public class Sym_Affine_Fragment extends Fragment {
             @Override
             public void onClick(View view) {
 
-
                 if(input_et.getText().toString().equals("")||input_k1.getText().toString().equals("")||input_k2.getText().toString().equals("")){
                     Toast.makeText(getContext(),"Please Enter Appropriate Value",Toast.LENGTH_SHORT).show();
                 }
+                else if(!input_et.getText().toString().matches("[A-Z]+"))
+                    Toast.makeText(getContext(), "Only Alphabets are allowed ", Toast.LENGTH_SHORT).show();
                 else {
                     String inp=input_et.getText().toString();
                     int k1=Integer.valueOf(input_k1.getText().toString());
@@ -93,14 +112,20 @@ public class Sym_Affine_Fragment extends Fragment {
                             k1_inv = i;
                         }
                     }
-                    for (int i = 0; i < inp.length(); i++)
-                    {
-                        temp = temp + (char) (((k1_inv * ((inp.charAt(i) - k2)) % 26)) + 65);
+                    if(k1_inv == 0) {
+                        output_tv.setText("Enter another key. Multiplicative inverse not possible");
                     }
-                    copy=temp;
-                    output_tv.setText("PlainText : "+copy);
-                }
+                    else{
+                        for (int i = 0; i < inp.length(); i++)
+                        {
+                            temp = temp + (char) (((k1_inv * ((inp.charAt(i) - 65) - k2) + 26) % 26 ) + 65);
+                        }
+                        copy=temp;
+                        output_tv.setText("PlainText : " + copy);
+                    }
 
+
+                }
             }
         });
 

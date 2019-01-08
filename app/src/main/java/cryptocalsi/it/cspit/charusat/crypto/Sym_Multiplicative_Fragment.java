@@ -22,7 +22,7 @@ import java.util.Objects;
 
 public class Sym_Multiplicative_Fragment extends Fragment {
 
-    public String ALPHABET = "abcdefghijklmnopqrstuvwxyz";
+    public String ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     private String copy;
     EditText input_et,key_et;
     TextView textView;
@@ -41,7 +41,7 @@ public class Sym_Multiplicative_Fragment extends Fragment {
         input_et=view.findViewById(R.id.plaintext_input);
         input_et.setFilters(new InputFilter[]{new InputFilter.AllCaps()});
         key_et=view.findViewById(R.id.key_input);
-        InputFilterMinMax filter = new InputFilterMinMax("0", "26") {};
+        InputFilterMinMax filter = new InputFilterMinMax("1", "25") {};
         key_et.setFilters(new InputFilter[]{filter});
         Button encryption = view.findViewById(R.id.button_encryption);
         encryption.setOnClickListener(new View.OnClickListener() {
@@ -51,20 +51,29 @@ public class Sym_Multiplicative_Fragment extends Fragment {
                 String input_string=input_et.getText().toString();
                 String key_string=key_et.getText().toString();
 
-                if(input_string.equals("")||key_string.equals(""))
+                if(input_string.equals("")||key_string.equals("")){
                     Toast.makeText(getContext(),"Please Enter Appropriate Value",Toast.LENGTH_SHORT).show();
+                }
+                else if(!input_string.toString().matches("[A-Z]+")){
+                    Toast.makeText(getContext(),"Only Alphabets are allowed",Toast.LENGTH_SHORT).show();
+                }
                 else {
-                    int key=Integer.valueOf(key_string);
-                    input_string=input_string.toLowerCase();
                     String ciphertext="";
-                    for(int i=0;i<input_string.length();i++){
-                        int charposition = ALPHABET.indexOf(input_string.charAt(i));
-                        int keyVal=(key*charposition)%26;
-                        char replaceVal=ALPHABET.charAt(keyVal);
-                        ciphertext+=replaceVal;
+                    try {
+                        BigInteger a = BigInteger.valueOf(Long.parseLong(key_string)).modInverse(BigInteger.valueOf(26));
+                        int key=Integer.valueOf(key_string);
+                        for(int i=0;i<input_string.length();i++){
+                            int charposition = ALPHABET.indexOf(input_string.charAt(i));
+                            int keyVal=(key*charposition)%26;
+                            char replaceVal=ALPHABET.charAt(keyVal);
+                            ciphertext+=replaceVal;
+                        }
+                        copy=ciphertext;
+                        textView.setText("CipherText : "+String.valueOf(ciphertext));
                     }
-                    copy=ciphertext;
-                    textView.setText("CipherText : "+String.valueOf(ciphertext));
+                    catch(Exception e) {
+                        textView.setText("Enter another key. Multiplicative inverse is not possible");
+                    }
                 }
             }
         });
@@ -76,27 +85,16 @@ public class Sym_Multiplicative_Fragment extends Fragment {
                 String input_string=input_et.getText().toString();
                 String key_string=key_et.getText().toString();
 
-                if(input_string.equals("")||key_string.equals(""))
+                if(input_string.equals("")||key_string.equals("")) {
                     Toast.makeText(getContext(),"Please Enter Appropriate Value",Toast.LENGTH_SHORT).show();
+                }
+                else if(!input_string.toString().matches("[A-Z]+")){
+                    Toast.makeText(getContext(),"Only Alphabets are allowed",Toast.LENGTH_SHORT).show();
+                }
                 else {
-
-                    long l= Long.parseLong(key_string);
-                    BigInteger bi=BigInteger.valueOf(l);
-                    input_string=input_string.toLowerCase();
                     String ciphertext="";
-                    int x=Integer.valueOf(key_string);
-                    int r,g,b;
-                    g=(x>26)?x:26;
-                    b=(x<26)?x:26;
-
-                    r=b;
-                    while ((g%b)!=0){
-                        r=g%b;
-                        g=b;
-                        b=r;
-                    }
-                    if (r==1){
-                        BigInteger a=BigInteger.valueOf(l).modInverse(BigInteger.valueOf(26));
+                    try {
+                        BigInteger a = BigInteger.valueOf(Long.parseLong(key_string)).modInverse(BigInteger.valueOf(26));
                         int key=a.intValue();
                         for(int i=0;i<input_string.length();i++){
                             int charposition=ALPHABET.indexOf(input_string.charAt(i));
@@ -107,9 +105,8 @@ public class Sym_Multiplicative_Fragment extends Fragment {
                         copy=ciphertext;
                         textView.setText("CipherText : "+ciphertext.toString());
                     }
-                    else {
-                        textView.setText("Enter another key. Multiplicative inverse not possible");
-
+                    catch(Exception e) {
+                        textView.setText("Enter another key. Multiplicative inverse is not possible");
                     }
                 }
 

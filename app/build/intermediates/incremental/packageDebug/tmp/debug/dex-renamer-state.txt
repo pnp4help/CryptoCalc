@@ -1,7 +1,0 @@
-#Wed Dec 26 12:24:46 IST 2018
-base.0=E\:\\A-Review-Project-PNP\\Crypto-SVS-13 Dec 2018\\Crypto\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
-path.1=classes.dex
-renamed.1=classes2.dex
-path.0=classes.dex
-renamed.0=classes.dex
-base.1=E\:\\A-Review-Project-PNP\\Crypto-SVS-13 Dec 2018\\Crypto\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\1

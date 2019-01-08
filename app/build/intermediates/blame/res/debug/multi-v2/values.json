@@ -1,8 +1,25 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\A-Review-Project-PNP\\Crypto-SVS-13 Dec 2018\\Crypto\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+            "outputFile": "E:\\A-Review-Project-PNP\\Crypto-SVS-Jan-2019\\Crypto\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
             "map": [
+                {
+                    "source": "E:\\A-Review-Project-PNP\\Crypto-SVS-Jan-2019\\Crypto\\app\\src\\main\\res\\values\\colors.xml",
+                    "from": {
+                        "startLines": "5,4,2,3",
+                        "startColumns": "2,2,2,2",
+                        "startOffsets": "191,147,53,98",
+                        "endColumns": "38,43,44,48",
+                        "endOffsets": "227,188,95,144"
+                    },
+                    "to": {
+                        "startLines": "151,154,155,156",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "7677,7833,7879,7926",
+                        "endColumns": "40,45,46,50",
+                        "endOffsets": "7713,7874,7921,7972"
+                    }
+                },
                 {
                     "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\111c20395c6a54cebab7945d67256961\\res\\values\\values.xml",
                     "from": {
@@ -23,7 +40,26 @@
                     }
                 },
                 {
-                    "source": "E:\\A-Review-Project-PNP\\Crypto-SVS-13 Dec 2018\\Crypto\\app\\src\\main\\res\\values\\strings.xml",
+                    "source": "E:\\A-Review-Project-PNP\\Crypto-SVS-Jan-2019\\Crypto\\app\\src\\main\\res\\values\\styles.xml",
+                    "from": {
+                        "startLines": "3,17,10",
+                        "startColumns": "2,2,2",
+                        "startOffsets": "50,564,350",
+                        "endLines": "8,19,15",
+                        "endColumns": "10,10,10",
+                        "endOffsets": "346,711,560"
+                    },
+                    "to": {
+                        "startLines": "829,835,838",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "68839,69140,69292",
+                        "endLines": "834,837,843",
+                        "endColumns": "10,10,10",
+                        "endOffsets": "69135,69287,69502"
+                    }
+                },
+                {
+                    "source": "E:\\A-Review-Project-PNP\\Crypto-SVS-Jan-2019\\Crypto\\app\\src\\main\\res\\values\\strings.xml",
                     "from": {
                         "startLines": "2,4,3,1",
                         "startColumns": "2,2,2,2",
@@ -133,25 +169,6 @@
                     }
                 },
                 {
-                    "source": "E:\\A-Review-Project-PNP\\Crypto-SVS-13 Dec 2018\\Crypto\\app\\src\\main\\res\\values\\styles.xml",
-                    "from": {
-                        "startLines": "3,17,10",
-                        "startColumns": "2,2,2",
-                        "startOffsets": "50,564,350",
-                        "endLines": "8,19,15",
-                        "endColumns": "10,10,10",
-                        "endOffsets": "346,711,560"
-                    },
-                    "to": {
-                        "startLines": "829,835,838",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "68839,69140,69292",
-                        "endLines": "834,837,843",
-                        "endColumns": "10,10,10",
-                        "endOffsets": "69135,69287,69502"
-                    }
-                },
-                {
                     "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\recyclerview-v7-27.1.1.aar\\b3e722d167d304d8e91379a9fc800cad\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
@@ -183,23 +200,6 @@
                         "startOffsets": "62676,62886,63025,63072,63127,63464,63518,63570,63619,63680",
                         "endColumns": "39,42,46,54,44,53,51,48,60,49",
                         "endOffsets": "62711,62924,63067,63122,63167,63513,63565,63614,63675,63725"
-                    }
-                },
-                {
-                    "source": "E:\\A-Review-Project-PNP\\Crypto-SVS-13 Dec 2018\\Crypto\\app\\src\\main\\res\\values\\colors.xml",
-                    "from": {
-                        "startLines": "5,4,2,3",
-                        "startColumns": "2,2,2,2",
-                        "startOffsets": "191,147,53,98",
-                        "endColumns": "38,43,44,48",
-                        "endOffsets": "227,188,95,144"
-                    },
-                    "to": {
-                        "startLines": "151,154,155,156",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "7677,7833,7879,7926",
-                        "endColumns": "40,45,46,50",
-                        "endOffsets": "7713,7874,7921,7972"
                     }
                 }
             ]

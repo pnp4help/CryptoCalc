@@ -15,13 +15,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.math.BigInteger;
 import java.util.Objects;
 
 public class Oth_prime_fragment extends Fragment {
 
     TextView temp;
     EditText num1_et;
-    long num1;
+    BigInteger num1;
 
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         getActionBar().setTitle("Prime Number");
@@ -48,33 +49,21 @@ public class Oth_prime_fragment extends Fragment {
                     Toast.makeText(getContext(),"Please Enter Appropriate Value",Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    num1=Long.valueOf(num1_et.getText().toString());
-                    if(num1==1)
-                        temp.setText("1 is neither Prime or Composite number");
-                    else {
-                        boolean check=isPrime(num1);
-                        if(check)
+                    num1 = new BigInteger(num1_et.getText().toString());
+                    BigInteger one = new BigInteger(String.valueOf((1)));
+                    if(num1.compareTo(one) == 0 || num1.compareTo(one) == -1)
+                        temp.setText("neither composite nor prime");
+                    else{
+                        if(num1.isProbablePrime(100))
                             temp.setText("Prime Number");
                         else
                             temp.setText("Composite Number");
                     }
-
                 }
             }
         });
 
     }
-    boolean isPrime(long n) {
-        //check if n is a multiple of 2
-        if (n % 2 == 0) return false;
-        //if not, then just check the odds
-        for (int i = 3; i * i <= n; i += 2) {
-            if (n % i == 0)
-                return false;
-        }
-        return true;
-    }
-
     private ActionBar getActionBar() {
         return ((MainActivity) Objects.requireNonNull(getActivity())).getSupportActionBar();
     }

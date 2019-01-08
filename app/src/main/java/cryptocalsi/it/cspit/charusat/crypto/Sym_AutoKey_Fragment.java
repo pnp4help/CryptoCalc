@@ -20,7 +20,7 @@ import java.util.Objects;
 
 public class Sym_AutoKey_Fragment extends Fragment {
 
-    private static String alpha = "abcdefghijklmnopqrstuvwxyz";
+    private static String alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     EditText input,key_et;
     TextView output_tv;
     String copy;
@@ -51,15 +51,20 @@ public class Sym_AutoKey_Fragment extends Fragment {
                 if(key_et.getText().toString().equals("")||input.getText().toString().equals("")){
                     Toast.makeText(getContext(),"Please Enter Appropriate Value",Toast.LENGTH_SHORT).show();
                 }
+                else if(!key_et.getText().toString().matches("[A-Z]") && !key_et.getText().toString().matches("[0-9]+")){
+                    output_tv.setText("Invallid key");
+                }
+                else if(!input.getText().toString().matches("[A-Z]+"))
+                    output_tv.setText("only alphabets are allowed in Plain text");
                 else {
                     String plaintext=input.getText().toString();
                     String key=key_et.getText().toString();
 
                     if (key.matches("[-+]?\\d*\\.?\\d+"))
-                        key = "" + alpha.charAt(Integer.parseInt(key));
+                        key = "" + alpha.charAt(Integer.parseInt(key) % 26);
+
                     int len = plaintext.length();
-                    String subkey = key + plaintext;
-                    subkey = subkey.substring(0, subkey.length() - key.length());
+                    String subkey = key + plaintext.substring(0,plaintext.length()-1);
                     String sb = "";
                     for (int x = 0; x < len; x++) {
                         int get1 = alpha.indexOf(plaintext.charAt(x));
@@ -82,13 +87,18 @@ public class Sym_AutoKey_Fragment extends Fragment {
                 if(key_et.getText().toString().equals("")||input.getText().toString().equals("")){
                     Toast.makeText(getContext(),"Please Enter Appropriate Value",Toast.LENGTH_SHORT).show();
                 }
+                else if(!key_et.getText().toString().matches("[A-Z]") && !key_et.getText().toString().matches("[0-9]+")){
+                    output_tv.setText("Invallid key");
+                }
+                else if(!input.getText().toString().matches("[A-Z]+"))
+                    output_tv.setText("only alphabets are allowed in Cipher text");
                 else {
 
                     String plaintext=input.getText().toString();
                     String key=key_et.getText().toString();
 
                     if (key.matches("[-+]?\\d*\\.?\\d+"))
-                        key = "" + alpha.charAt(Integer.parseInt(key));
+                        key = "" + alpha.charAt(Integer.parseInt(key) % 26);
                     int len = plaintext.length();
                     String current = key;
                     String sb ="";
@@ -97,8 +107,7 @@ public class Sym_AutoKey_Fragment extends Fragment {
                         int get1 = alpha.indexOf(plaintext.charAt(x));
                         int get2 = alpha.indexOf(current.charAt(x));
 
-                        int total = (get1 - get2)%26;
-                        total = (total<0)? total + 26 : total;
+                        int total = (get1 - get2 + 26) % 26;
                         sb += alpha.charAt(total);
 
                         current += alpha.charAt(total);

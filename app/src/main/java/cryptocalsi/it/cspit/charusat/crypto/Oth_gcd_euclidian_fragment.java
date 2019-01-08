@@ -15,13 +15,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.math.BigInteger;
 import java.util.Objects;
 
 public class Oth_gcd_euclidian_fragment extends Fragment {
 
     TextView temp;
     EditText num1_et,num2_et;
-    long num1,num2;
+    BigInteger num1,num2;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -54,10 +55,9 @@ public class Oth_gcd_euclidian_fragment extends Fragment {
                     Toast.makeText(getContext(),"Please Enter Appropriate Value",Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    num1=Long.valueOf(num1_et.getText().toString());
-                    num2=Long.valueOf(num2_et.getText().toString());
-                    temp.setText("GCD of two numbers : "+String.valueOf(gcd(num1,num2)));
-
+                    num1 = new BigInteger(num1_et.getText().toString());
+                    num2 = new BigInteger(num2_et.getText().toString());
+                    temp.setText("GCD of two numbers : "+ num1.gcd(num2));
                 }
             }
         });
@@ -66,12 +66,5 @@ public class Oth_gcd_euclidian_fragment extends Fragment {
 
     private ActionBar getActionBar() {
         return ((MainActivity) Objects.requireNonNull(getActivity())).getSupportActionBar();
-    }
-
-    public long gcd(long p, long q)
-    {
-        if (p % q == 0)
-            return q;
-        return gcd(q, p % q);
     }
 }

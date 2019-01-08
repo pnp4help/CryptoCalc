@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\A-Review-Project-PNP\\Crypto-SVS-13 Dec 2018\\Crypto\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hdpi-v4\\values-hdpi-v4.xml",
+            "outputFile": "E:\\A-Review-Project-PNP\\Crypto-SVS-Jan-2019\\Crypto\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hdpi-v4\\values-hdpi-v4.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\d461fddb322a2a84fccb702f1c175ecd\\res\\values-hdpi-v4\\values-hdpi-v4.xml",

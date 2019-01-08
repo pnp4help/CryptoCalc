@@ -22,8 +22,7 @@ public class Oth_multiplicative_inverse_fragment extends Fragment {
 
     TextView temp;
     EditText num1_et,num2_et;
-    long num1,num2;
-    // BigInteger num1,num2;
+    BigInteger num1,num2;
 
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         getActionBar().setTitle("Multiplicative Inverse");
@@ -56,9 +55,21 @@ public class Oth_multiplicative_inverse_fragment extends Fragment {
                     Toast.makeText(getContext(),"Please Enter Appropriate Value",Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    num1=Long.valueOf(num1_et.getText().toString());
+                    num1 = new BigInteger(num1_et.getText().toString());
+                    num2 = new BigInteger(num2_et.getText().toString());
+
+                    try{
+                        temp.setText(""+num1.modInverse(num2));
+                    }
+                    catch(Exception e){
+                        temp.setText("Inverse is not possible");
+                    }
+
+
+
+                    /*num1=Long.valueOf(num1_et.getText().toString());
                     num2=Long.valueOf(num2_et.getText().toString());
-                    temp.setText("Modular Multiplicative Inverse : "+String.valueOf(modInverse(num1,num2)));
+                    temp.setText("Modular Multiplicative Inverse : "+String.valueOf(modInverse(num1,num2)));*/
 
                 }
             }

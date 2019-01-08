@@ -5,6 +5,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBar;
+import android.text.InputFilter;
 import android.text.InputType;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -34,6 +35,9 @@ public class Oth_miller_rabin_fragment extends Fragment {
   @Override
   public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
 
+    InputFilterMinMax filter1 = new InputFilterMinMax("0", "1000000000") {};
+    InputFilterMinMax filter2 = new InputFilterMinMax("1", "5") {};
+
     ImageView imageView=(ImageView)view.findViewById(R.id.swap);
     imageView.setVisibility(View.GONE);
     temp=(TextView)view.findViewById(R.id.plaintext_label);
@@ -42,9 +46,12 @@ public class Oth_miller_rabin_fragment extends Fragment {
     temp.setText("Iterations :");
     temp=(TextView)view.findViewById(R.id.output);
     num1_et=(EditText)view.findViewById(R.id.plaintext_input);
+    num1_et.setFilters(new InputFilter[]{filter1});
     num1_et.setHint("Enter Number");
     num1_et.setInputType(InputType.TYPE_CLASS_NUMBER);
+
     num2_et=(EditText)view.findViewById(R.id.key_input);
+    num2_et.setFilters(new InputFilter[]{filter2});
     num2_et.setHint("Enter Number of Iterations");
     Button chk_prime=(Button)view.findViewById(R.id.button_decryption);
     chk_prime.setVisibility(View.GONE);
@@ -80,13 +87,13 @@ public class Oth_miller_rabin_fragment extends Fragment {
 class MillerRabin{
   public boolean isPrime(long n, int iteration)
   {
-    /** base case **/
+    /* base case */
     if (n == 0 || n == 1)
       return false;
-    /** base case - 2 is prime **/
+    /* base case - 2 is prime */
     if (n == 2)
       return true;
-    /** an even number other than 2 is composite **/
+    /* an even number other than 2 is composite */
     if (n % 2 == 0)
       return false;
 

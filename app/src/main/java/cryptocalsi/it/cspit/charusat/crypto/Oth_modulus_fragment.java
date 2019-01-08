@@ -14,6 +14,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import java.math.*;
 
 import java.util.Objects;
 
@@ -22,8 +23,7 @@ public class Oth_modulus_fragment extends Fragment {
 
     TextView temp;
     EditText num1_et,num2_et;
-    int num2;
-    String num1;
+    BigInteger n1,n2;
 
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         getActionBar().setTitle("Modulus");
@@ -56,10 +56,10 @@ public class Oth_modulus_fragment extends Fragment {
                     Toast.makeText(getContext(),"Please Enter Appropriate Value",Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    num1=num1_et.getText().toString();
-                    num2=Integer.valueOf(num2_et.getText().toString());
-                    temp.setText("Remainder : "+String.valueOf(mod(num1,num2)));
+                    n1 = new BigInteger(num1_et.getText().toString());
+                    n2 = new BigInteger(num2_et.getText().toString());
 
+                    temp.setText(""+n1.mod(n2));
                 }
             }
         });
@@ -67,19 +67,5 @@ public class Oth_modulus_fragment extends Fragment {
 
     private ActionBar getActionBar() {
         return ((MainActivity) Objects.requireNonNull(getActivity())).getSupportActionBar();
-    }
-
-    public int mod(String num, int a)
-    {
-
-        // Initialize result
-        int res = 0;
-
-        // One by one process all digits of 'num'
-        for (int i = 0; i < num.length(); i++)
-            res = (res * 10 + (int)num.charAt(i)
-                    - '0') % a;
-
-        return res;
     }
 }

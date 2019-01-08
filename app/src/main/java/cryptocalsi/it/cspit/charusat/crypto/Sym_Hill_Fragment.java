@@ -20,7 +20,7 @@ import java.util.Objects;
 
 
 public class Sym_Hill_Fragment extends Fragment {
-
+    Boolean flag;
     EditText input_et,key_et;
     TextView output_tv;
     String copy,copy_1;
@@ -38,7 +38,7 @@ public class Sym_Hill_Fragment extends Fragment {
         setKeyTitle.setText("Matrix Value of Key : ");
         key_et=(EditText)view.findViewById(R.id.key_input);
         key_et.setHint("Enter Key Value");
-        key_et.setInputType(InputType.TYPE_CLASS_TEXT);
+        key_et.setFilters(new InputFilter[]{new InputFilter.AllCaps()});
         input_et=(EditText)view.findViewById(R.id.plaintext_input);
         input_et.setFilters(new InputFilter[]{new InputFilter.AllCaps()});
         output_tv=(TextView)view.findViewById(R.id.output);
@@ -46,16 +46,22 @@ public class Sym_Hill_Fragment extends Fragment {
         encryption.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                flag = true;
                 if(input_et.getText().toString().equals("")||key_et.getText().toString().equals("")){
                     Toast.makeText(getContext(),"Please Enter Appropriate Value",Toast.LENGTH_SHORT).show();
+                }
+                else if(!input_et.getText().toString().matches("[A-Z]+") || !key_et.getText().toString().matches("[A-Z]+")){
+                    Toast.makeText(getContext(),"Only Alphabets are allowed",Toast.LENGTH_SHORT).show();
                 }
                 else {
                     String input_string=input_et.getText().toString();
                     String key_string=key_et.getText().toString();
                     HillCipher obj = new HillCipher();
                     double sq = Math.sqrt(key_string.length());
-                    if (sq != (long) sq)
+                    if (sq != (long) sq) {
                         output_tv.setText("Invalid key length!!! Does not form a square matrix...");
+                        flag = false;
+                    }
                     else
                     {
                         int s = (int) sq;
@@ -78,6 +84,9 @@ public class Sym_Hill_Fragment extends Fragment {
                 if(input_et.getText().toString().equals("")||key_et.getText().toString().equals("")){
                     Toast.makeText(getContext(),"Please Enter Appropriate Value",Toast.LENGTH_SHORT).show();
                 }
+                else if(!input_et.getText().toString().matches("[A-Z]+") || !key_et.getText().toString().matches("[A-Z]+")){
+                    Toast.makeText(getContext(),"Only Alphabets are allowed",Toast.LENGTH_SHORT).show();
+                }
                 else {
                     String input_string=input_et.getText().toString();
                     String key_string=key_et.getText().toString();
@@ -90,8 +99,9 @@ public class Sym_Hill_Fragment extends Fragment {
                         int s = (int) sq;
                         if (obj.check(key_string, s))
                         {
-                            copy=obj.divide(input_string, s);
                             copy_1=obj.cofact(obj.keymatrix, s);
+                            obj.check(copy_1, s);
+                            copy=obj.divide(input_string, s);
                             output_tv.setText("CipherText : "+copy+"\nInverseKey : "+copy_1);
                         }
                     }
@@ -114,9 +124,9 @@ public class Sym_Hill_Fragment extends Fragment {
         swap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                input_et.setText(copy,TextView.BufferType.EDITABLE);
-                key_et.setText(copy_1,TextView.BufferType.EDITABLE);
-
+                if(flag){
+                    input_et.setText(copy,TextView.BufferType.EDITABLE);
+                }
             }
         });
 
@@ -155,8 +165,7 @@ class HillCipher {
     public String perform(String line) {
         linetomatrix(line);
         linemultiplykey(line.length());
-        String res=result(line.length());
-        return res;
+        return result(line.length());
     }
 
     public void keytomatrix(String key, int len) {
@@ -164,7 +173,7 @@ class HillCipher {
         int c = 0;
         for (int i = 0; i < len; i++) {
             for (int j = 0; j < len; j++) {
-                keymatrix[i][j] = ((int) key.charAt(c)) - 97;
+                keymatrix[i][j] = ((int) key.charAt(c)) - 65;
                 c++;
             }
         }
@@ -173,7 +182,7 @@ class HillCipher {
     public void linetomatrix(String line) {
         linematrix = new int[line.length()];
         for (int i = 0; i < line.length(); i++) {
-            linematrix[i] = ((int) line.charAt(i)) - 97;
+            linematrix[i] = ((int) line.charAt(i)) - 65;
         }
     }
 
@@ -190,7 +199,7 @@ class HillCipher {
     public String result(int len) {
         String result = "";
         for (int i = 0; i < len; i++) {
-            result += (char) (resultmatrix[i] + 97);
+            result += (char) (resultmatrix[i] + 65);
         }
         return result;
     }
@@ -200,12 +209,10 @@ class HillCipher {
         int d = determinant(keymatrix, len);
         d = d % 26;
         if (d == 0) {
-            System.out
-                    .println("Invalid key!!! Key is not invertible because determinant=0...");
+            System.out.println("Invalid key!!! Key is not invertible because determinant=0...");
             return false;
         } else if (d % 2 == 0 || d % 13 == 0) {
-            System.out
-                    .println("Invalid key!!! Key is not invertible because determinant has common factor with 26...");
+            System.out.println("Invalid key!!! Key is not invertible because determinant has common factor with 26...");
             return false;
         } else {
             return true;
@@ -317,7 +324,7 @@ class HillCipher {
         String invkey = "";
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                invkey += (char) (inv[i][j] + 97);
+                invkey += (char) (inv[i][j] + 65);
             }
         }
         return invkey;

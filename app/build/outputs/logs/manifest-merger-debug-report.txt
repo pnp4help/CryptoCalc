@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\A-Review-Project-PNP\Crypto-SVS-13 Dec 2018\Crypto\app\src\main\AndroidManifest.xml:1:1-30:12
-INJECTED from E:\A-Review-Project-PNP\Crypto-SVS-13 Dec 2018\Crypto\app\src\main\AndroidManifest.xml:1:1-30:12
-INJECTED from E:\A-Review-Project-PNP\Crypto-SVS-13 Dec 2018\Crypto\app\src\main\AndroidManifest.xml:1:1-30:12
-INJECTED from E:\A-Review-Project-PNP\Crypto-SVS-13 Dec 2018\Crypto\app\src\main\AndroidManifest.xml:1:1-30:12
+ADDED from E:\A-Review-Project-PNP\Crypto-SVS-Jan-2019\Crypto\app\src\main\AndroidManifest.xml:1:1-30:12
+INJECTED from E:\A-Review-Project-PNP\Crypto-SVS-Jan-2019\Crypto\app\src\main\AndroidManifest.xml:1:1-30:12
+INJECTED from E:\A-Review-Project-PNP\Crypto-SVS-Jan-2019\Crypto\app\src\main\AndroidManifest.xml:1:1-30:12
+INJECTED from E:\A-Review-Project-PNP\Crypto-SVS-Jan-2019\Crypto\app\src\main\AndroidManifest.xml:1:1-30:12
 MERGED from [com.android.support:design:27.1.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\111c20395c6a54cebab7945d67256961\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\d461fddb322a2a84fccb702f1c175ecd\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support.constraint:constraint-layout:1.1.2] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.2.aar\6585f398f61d34e3a7527fed91520197\AndroidManifest.xml:2:1-11:12
@@ -21,69 +21,69 @@ MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\Administrator\
 MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\02df8aee243c4f0bf5f77bb05e576979\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\327451ff2aaf45035208ca260723cd19\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\540c7d31c67179ff528470883341b9eb\AndroidManifest.xml:17:1-22:12
-INJECTED from E:\A-Review-Project-PNP\Crypto-SVS-13 Dec 2018\Crypto\app\src\main\AndroidManifest.xml:1:1-30:12
-INJECTED from E:\A-Review-Project-PNP\Crypto-SVS-13 Dec 2018\Crypto\app\src\main\AndroidManifest.xml:1:1-30:12
-INJECTED from E:\A-Review-Project-PNP\Crypto-SVS-13 Dec 2018\Crypto\app\src\main\AndroidManifest.xml:1:1-30:12
+INJECTED from E:\A-Review-Project-PNP\Crypto-SVS-Jan-2019\Crypto\app\src\main\AndroidManifest.xml:1:1-30:12
+INJECTED from E:\A-Review-Project-PNP\Crypto-SVS-Jan-2019\Crypto\app\src\main\AndroidManifest.xml:1:1-30:12
+INJECTED from E:\A-Review-Project-PNP\Crypto-SVS-Jan-2019\Crypto\app\src\main\AndroidManifest.xml:1:1-30:12
 	package
-		ADDED from E:\A-Review-Project-PNP\Crypto-SVS-13 Dec 2018\Crypto\app\src\main\AndroidManifest.xml:3:5-51
-		INJECTED from E:\A-Review-Project-PNP\Crypto-SVS-13 Dec 2018\Crypto\app\src\main\AndroidManifest.xml
-		INJECTED from E:\A-Review-Project-PNP\Crypto-SVS-13 Dec 2018\Crypto\app\src\main\AndroidManifest.xml
+		ADDED from E:\A-Review-Project-PNP\Crypto-SVS-Jan-2019\Crypto\app\src\main\AndroidManifest.xml:3:5-51
+		INJECTED from E:\A-Review-Project-PNP\Crypto-SVS-Jan-2019\Crypto\app\src\main\AndroidManifest.xml
+		INJECTED from E:\A-Review-Project-PNP\Crypto-SVS-Jan-2019\Crypto\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from E:\A-Review-Project-PNP\Crypto-SVS-13 Dec 2018\Crypto\app\src\main\AndroidManifest.xml
-		ADDED from E:\A-Review-Project-PNP\Crypto-SVS-13 Dec 2018\Crypto\app\src\main\AndroidManifest.xml:1:1-30:12
-		INJECTED from E:\A-Review-Project-PNP\Crypto-SVS-13 Dec 2018\Crypto\app\src\main\AndroidManifest.xml
+		INJECTED from E:\A-Review-Project-PNP\Crypto-SVS-Jan-2019\Crypto\app\src\main\AndroidManifest.xml
+		ADDED from E:\A-Review-Project-PNP\Crypto-SVS-Jan-2019\Crypto\app\src\main\AndroidManifest.xml:1:1-30:12
+		INJECTED from E:\A-Review-Project-PNP\Crypto-SVS-Jan-2019\Crypto\app\src\main\AndroidManifest.xml
 	xmlns:tools
-		ADDED from E:\A-Review-Project-PNP\Crypto-SVS-13 Dec 2018\Crypto\app\src\main\AndroidManifest.xml:2:5-51
+		ADDED from E:\A-Review-Project-PNP\Crypto-SVS-Jan-2019\Crypto\app\src\main\AndroidManifest.xml:2:5-51
 	android:versionCode
-		INJECTED from E:\A-Review-Project-PNP\Crypto-SVS-13 Dec 2018\Crypto\app\src\main\AndroidManifest.xml
-		ADDED from E:\A-Review-Project-PNP\Crypto-SVS-13 Dec 2018\Crypto\app\src\main\AndroidManifest.xml:1:1-30:12
-		INJECTED from E:\A-Review-Project-PNP\Crypto-SVS-13 Dec 2018\Crypto\app\src\main\AndroidManifest.xml
+		INJECTED from E:\A-Review-Project-PNP\Crypto-SVS-Jan-2019\Crypto\app\src\main\AndroidManifest.xml
+		ADDED from E:\A-Review-Project-PNP\Crypto-SVS-Jan-2019\Crypto\app\src\main\AndroidManifest.xml:1:1-30:12
+		INJECTED from E:\A-Review-Project-PNP\Crypto-SVS-Jan-2019\Crypto\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from E:\A-Review-Project-PNP\Crypto-SVS-13 Dec 2018\Crypto\app\src\main\AndroidManifest.xml:1:11-69
+		ADDED from E:\A-Review-Project-PNP\Crypto-SVS-Jan-2019\Crypto\app\src\main\AndroidManifest.xml:1:11-69
 application
-ADDED from E:\A-Review-Project-PNP\Crypto-SVS-13 Dec 2018\Crypto\app\src\main\AndroidManifest.xml:5:5-28:19
+ADDED from E:\A-Review-Project-PNP\Crypto-SVS-Jan-2019\Crypto\app\src\main\AndroidManifest.xml:5:5-28:19
 MERGED from [com.android.support.constraint:constraint-layout:1.1.2] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.2.aar\6585f398f61d34e3a7527fed91520197\AndroidManifest.xml:9:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.1.2] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.2.aar\6585f398f61d34e3a7527fed91520197\AndroidManifest.xml:9:5-20
 	android:supportsRtl
-		ADDED from E:\A-Review-Project-PNP\Crypto-SVS-13 Dec 2018\Crypto\app\src\main\AndroidManifest.xml:10:9-35
+		ADDED from E:\A-Review-Project-PNP\Crypto-SVS-Jan-2019\Crypto\app\src\main\AndroidManifest.xml:10:9-35
 	android:label
-		ADDED from E:\A-Review-Project-PNP\Crypto-SVS-13 Dec 2018\Crypto\app\src\main\AndroidManifest.xml:8:9-41
+		ADDED from E:\A-Review-Project-PNP\Crypto-SVS-Jan-2019\Crypto\app\src\main\AndroidManifest.xml:8:9-41
 	tools:ignore
-		ADDED from E:\A-Review-Project-PNP\Crypto-SVS-13 Dec 2018\Crypto\app\src\main\AndroidManifest.xml:12:9-48
+		ADDED from E:\A-Review-Project-PNP\Crypto-SVS-Jan-2019\Crypto\app\src\main\AndroidManifest.xml:12:9-48
 	android:roundIcon
-		ADDED from E:\A-Review-Project-PNP\Crypto-SVS-13 Dec 2018\Crypto\app\src\main\AndroidManifest.xml:9:9-54
+		ADDED from E:\A-Review-Project-PNP\Crypto-SVS-Jan-2019\Crypto\app\src\main\AndroidManifest.xml:9:9-54
 	android:icon
-		ADDED from E:\A-Review-Project-PNP\Crypto-SVS-13 Dec 2018\Crypto\app\src\main\AndroidManifest.xml:7:9-46
+		ADDED from E:\A-Review-Project-PNP\Crypto-SVS-Jan-2019\Crypto\app\src\main\AndroidManifest.xml:7:9-46
 	android:allowBackup
-		ADDED from E:\A-Review-Project-PNP\Crypto-SVS-13 Dec 2018\Crypto\app\src\main\AndroidManifest.xml:6:9-35
+		ADDED from E:\A-Review-Project-PNP\Crypto-SVS-Jan-2019\Crypto\app\src\main\AndroidManifest.xml:6:9-35
 	android:theme
-		ADDED from E:\A-Review-Project-PNP\Crypto-SVS-13 Dec 2018\Crypto\app\src\main\AndroidManifest.xml:11:9-40
+		ADDED from E:\A-Review-Project-PNP\Crypto-SVS-Jan-2019\Crypto\app\src\main\AndroidManifest.xml:11:9-40
 activity#cryptocalsi.it.cspit.charusat.crypto.MainActivity
-ADDED from E:\A-Review-Project-PNP\Crypto-SVS-13 Dec 2018\Crypto\app\src\main\AndroidManifest.xml:13:9-20:20
+ADDED from E:\A-Review-Project-PNP\Crypto-SVS-Jan-2019\Crypto\app\src\main\AndroidManifest.xml:13:9-20:20
 	android:theme
-		ADDED from E:\A-Review-Project-PNP\Crypto-SVS-13 Dec 2018\Crypto\app\src\main\AndroidManifest.xml:15:13-56
+		ADDED from E:\A-Review-Project-PNP\Crypto-SVS-Jan-2019\Crypto\app\src\main\AndroidManifest.xml:15:13-56
 	android:name
-		ADDED from E:\A-Review-Project-PNP\Crypto-SVS-13 Dec 2018\Crypto\app\src\main\AndroidManifest.xml:14:13-41
+		ADDED from E:\A-Review-Project-PNP\Crypto-SVS-Jan-2019\Crypto\app\src\main\AndroidManifest.xml:14:13-41
 intent-filter#action:name:android.intent.action.MAIN
-ADDED from E:\A-Review-Project-PNP\Crypto-SVS-13 Dec 2018\Crypto\app\src\main\AndroidManifest.xml:16:13-19:29
+ADDED from E:\A-Review-Project-PNP\Crypto-SVS-Jan-2019\Crypto\app\src\main\AndroidManifest.xml:16:13-19:29
 action#android.intent.action.MAIN
-ADDED from E:\A-Review-Project-PNP\Crypto-SVS-13 Dec 2018\Crypto\app\src\main\AndroidManifest.xml:17:17-69
+ADDED from E:\A-Review-Project-PNP\Crypto-SVS-Jan-2019\Crypto\app\src\main\AndroidManifest.xml:17:17-69
 	android:name
-		ADDED from E:\A-Review-Project-PNP\Crypto-SVS-13 Dec 2018\Crypto\app\src\main\AndroidManifest.xml:17:25-66
+		ADDED from E:\A-Review-Project-PNP\Crypto-SVS-Jan-2019\Crypto\app\src\main\AndroidManifest.xml:17:25-66
 activity#cryptocalsi.it.cspit.charusat.crypto.Splash_Screen
-ADDED from E:\A-Review-Project-PNP\Crypto-SVS-13 Dec 2018\Crypto\app\src\main\AndroidManifest.xml:21:9-27:20
+ADDED from E:\A-Review-Project-PNP\Crypto-SVS-Jan-2019\Crypto\app\src\main\AndroidManifest.xml:21:9-27:20
 	android:name
-		ADDED from E:\A-Review-Project-PNP\Crypto-SVS-13 Dec 2018\Crypto\app\src\main\AndroidManifest.xml:21:19-48
+		ADDED from E:\A-Review-Project-PNP\Crypto-SVS-Jan-2019\Crypto\app\src\main\AndroidManifest.xml:21:19-48
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from E:\A-Review-Project-PNP\Crypto-SVS-13 Dec 2018\Crypto\app\src\main\AndroidManifest.xml:22:13-26:29
+ADDED from E:\A-Review-Project-PNP\Crypto-SVS-Jan-2019\Crypto\app\src\main\AndroidManifest.xml:22:13-26:29
 category#android.intent.category.LAUNCHER
-ADDED from E:\A-Review-Project-PNP\Crypto-SVS-13 Dec 2018\Crypto\app\src\main\AndroidManifest.xml:25:17-77
+ADDED from E:\A-Review-Project-PNP\Crypto-SVS-Jan-2019\Crypto\app\src\main\AndroidManifest.xml:25:17-77
 	android:name
-		ADDED from E:\A-Review-Project-PNP\Crypto-SVS-13 Dec 2018\Crypto\app\src\main\AndroidManifest.xml:25:27-74
+		ADDED from E:\A-Review-Project-PNP\Crypto-SVS-Jan-2019\Crypto\app\src\main\AndroidManifest.xml:25:27-74
 uses-sdk
-INJECTED from E:\A-Review-Project-PNP\Crypto-SVS-13 Dec 2018\Crypto\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from E:\A-Review-Project-PNP\Crypto-SVS-13 Dec 2018\Crypto\app\src\main\AndroidManifest.xml
-INJECTED from E:\A-Review-Project-PNP\Crypto-SVS-13 Dec 2018\Crypto\app\src\main\AndroidManifest.xml
+INJECTED from E:\A-Review-Project-PNP\Crypto-SVS-Jan-2019\Crypto\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from E:\A-Review-Project-PNP\Crypto-SVS-Jan-2019\Crypto\app\src\main\AndroidManifest.xml
+INJECTED from E:\A-Review-Project-PNP\Crypto-SVS-Jan-2019\Crypto\app\src\main\AndroidManifest.xml
 MERGED from [com.android.support:design:27.1.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\111c20395c6a54cebab7945d67256961\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:design:27.1.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\111c20395c6a54cebab7945d67256961\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\d461fddb322a2a84fccb702f1c175ecd\AndroidManifest.xml:20:5-44
@@ -118,13 +118,13 @@ MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\Administrator\.gradl
 MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\327451ff2aaf45035208ca260723cd19\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.core:runtime:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\540c7d31c67179ff528470883341b9eb\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.core:runtime:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\540c7d31c67179ff528470883341b9eb\AndroidManifest.xml:20:5-44
-INJECTED from E:\A-Review-Project-PNP\Crypto-SVS-13 Dec 2018\Crypto\app\src\main\AndroidManifest.xml
-INJECTED from E:\A-Review-Project-PNP\Crypto-SVS-13 Dec 2018\Crypto\app\src\main\AndroidManifest.xml
+INJECTED from E:\A-Review-Project-PNP\Crypto-SVS-Jan-2019\Crypto\app\src\main\AndroidManifest.xml
+INJECTED from E:\A-Review-Project-PNP\Crypto-SVS-Jan-2019\Crypto\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from E:\A-Review-Project-PNP\Crypto-SVS-13 Dec 2018\Crypto\app\src\main\AndroidManifest.xml
-		ADDED from E:\A-Review-Project-PNP\Crypto-SVS-13 Dec 2018\Crypto\app\src\main\AndroidManifest.xml
-		INJECTED from E:\A-Review-Project-PNP\Crypto-SVS-13 Dec 2018\Crypto\app\src\main\AndroidManifest.xml
+		INJECTED from E:\A-Review-Project-PNP\Crypto-SVS-Jan-2019\Crypto\app\src\main\AndroidManifest.xml
+		ADDED from E:\A-Review-Project-PNP\Crypto-SVS-Jan-2019\Crypto\app\src\main\AndroidManifest.xml
+		INJECTED from E:\A-Review-Project-PNP\Crypto-SVS-Jan-2019\Crypto\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from E:\A-Review-Project-PNP\Crypto-SVS-13 Dec 2018\Crypto\app\src\main\AndroidManifest.xml
-		ADDED from E:\A-Review-Project-PNP\Crypto-SVS-13 Dec 2018\Crypto\app\src\main\AndroidManifest.xml
-		INJECTED from E:\A-Review-Project-PNP\Crypto-SVS-13 Dec 2018\Crypto\app\src\main\AndroidManifest.xml
+		INJECTED from E:\A-Review-Project-PNP\Crypto-SVS-Jan-2019\Crypto\app\src\main\AndroidManifest.xml
+		ADDED from E:\A-Review-Project-PNP\Crypto-SVS-Jan-2019\Crypto\app\src\main\AndroidManifest.xml
+		INJECTED from E:\A-Review-Project-PNP\Crypto-SVS-Jan-2019\Crypto\app\src\main\AndroidManifest.xml
