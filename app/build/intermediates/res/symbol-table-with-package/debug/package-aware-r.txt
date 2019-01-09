@@ -924,8 +924,6 @@ id nav_Feedback
 id nav_Hashing
 id nav_Home
 id nav_Other
-id nav_Share
-id nav_Social
 id nav_Symmetric
 id nav_view
 id navigation_header_container
@@ -1189,6 +1187,7 @@ string app_name
 string appbar_scrolling_view_behavior
 string bottom_sheet_behavior
 string character_counter_pattern
+string madeby
 string navigation_drawer_close
 string navigation_drawer_open
 string password_toggle_content_description

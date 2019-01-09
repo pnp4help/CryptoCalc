@@ -50,9 +50,9 @@ public class Sym_Hill_Fragment extends Fragment {
                 if(input_et.getText().toString().equals("")||key_et.getText().toString().equals("")){
                     Toast.makeText(getContext(),"Please Enter Appropriate Value",Toast.LENGTH_SHORT).show();
                 }
-                else if(!input_et.getText().toString().matches("[A-Z]+") || !key_et.getText().toString().matches("[A-Z]+")){
-                    Toast.makeText(getContext(),"Only Alphabets are allowed",Toast.LENGTH_SHORT).show();
-                }
+              //  else if(!input_et.getText().toString().matches("[A-Z]+") || !key_et.getText().toString().matches("[A-Z]+")){
+            //        Toast.makeText(getContext(),"Only Alphabets are allowed",Toast.LENGTH_SHORT).show();
+           //     }
                 else {
                     String input_string=input_et.getText().toString();
                     String key_string=key_et.getText().toString();
@@ -84,9 +84,9 @@ public class Sym_Hill_Fragment extends Fragment {
                 if(input_et.getText().toString().equals("")||key_et.getText().toString().equals("")){
                     Toast.makeText(getContext(),"Please Enter Appropriate Value",Toast.LENGTH_SHORT).show();
                 }
-                else if(!input_et.getText().toString().matches("[A-Z]+") || !key_et.getText().toString().matches("[A-Z]+")){
-                    Toast.makeText(getContext(),"Only Alphabets are allowed",Toast.LENGTH_SHORT).show();
-                }
+        //        else if(!input_et.getText().toString().matches("[A-Z]+") || !key_et.getText().toString().matches("[A-Z]+")){
+           //         Toast.makeText(getContext(),"Only Alphabets are allowed",Toast.LENGTH_SHORT).show();
+           //     }
                 else {
                     String input_string=input_et.getText().toString();
                     String key_string=key_et.getText().toString();

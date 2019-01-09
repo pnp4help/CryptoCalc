@@ -70,12 +70,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new FeedbackFragment()).addToBackStack("Stack").commit();
                 navigationView.setCheckedItem(R.id.nav_Feedback);
                 break;
-            case R.id.nav_Social:
-                Toast.makeText(getApplicationContext(),"Coming Soon",Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.nav_Share:
-                Toast.makeText(getApplicationContext(),"Coming Soon",Toast.LENGTH_SHORT).show();
-                break;
         }
 
         drawer.closeDrawer(GravityCompat.START);

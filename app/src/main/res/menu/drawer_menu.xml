@@ -27,15 +27,4 @@
             android:title="Feedback" />
     </group>
 
-    <item android:title="@string/testTitle">
-        <menu>
-            <item
-                android:id="@+id/nav_Social"
-                android:title="Social" />
-            <item
-                android:id="@+id/nav_Share"
-                android:icon="@drawable/ic_share"
-                android:title="Share" />
-        </menu>
-    </item>
 </menu>
