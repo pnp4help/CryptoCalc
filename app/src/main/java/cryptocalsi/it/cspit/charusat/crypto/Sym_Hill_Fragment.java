@@ -24,6 +24,7 @@ public class Sym_Hill_Fragment extends Fragment {
     EditText input_et,key_et;
     TextView output_tv;
     String copy,copy_1;
+    int extraChars;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -50,9 +51,9 @@ public class Sym_Hill_Fragment extends Fragment {
                 if(input_et.getText().toString().equals("")||key_et.getText().toString().equals("")){
                     Toast.makeText(getContext(),"Please Enter Appropriate Value",Toast.LENGTH_SHORT).show();
                 }
-              //  else if(!input_et.getText().toString().matches("[A-Z]+") || !key_et.getText().toString().matches("[A-Z]+")){
-            //        Toast.makeText(getContext(),"Only Alphabets are allowed",Toast.LENGTH_SHORT).show();
-           //     }
+                else if(!input_et.getText().toString().matches("[A-Z]+") || !key_et.getText().toString().matches("[A-Z]+")){
+                    Toast.makeText(getContext(),"Only Alphabets are allowed",Toast.LENGTH_SHORT).show();
+                }
                 else {
                     String input_string=input_et.getText().toString();
                     String key_string=key_et.getText().toString();
@@ -69,7 +70,12 @@ public class Sym_Hill_Fragment extends Fragment {
                         {
                             copy=obj.divide(input_string, s);
                             copy_1=obj.cofact(obj.keymatrix, s);
+                            extraChars = input_string.length()%s;
                             output_tv.setText("CipherText : "+copy+"\nInverseKey : "+copy_1);
+                        }
+                        else {
+                            output_tv.setText("Key Inverse is not possible. Try another key...");
+                            flag = false;
                         }
                     }
 
@@ -84,16 +90,18 @@ public class Sym_Hill_Fragment extends Fragment {
                 if(input_et.getText().toString().equals("")||key_et.getText().toString().equals("")){
                     Toast.makeText(getContext(),"Please Enter Appropriate Value",Toast.LENGTH_SHORT).show();
                 }
-        //        else if(!input_et.getText().toString().matches("[A-Z]+") || !key_et.getText().toString().matches("[A-Z]+")){
-           //         Toast.makeText(getContext(),"Only Alphabets are allowed",Toast.LENGTH_SHORT).show();
-           //     }
+                else if(!input_et.getText().toString().matches("[A-Z]+") || !key_et.getText().toString().matches("[A-Z]+")){
+                    Toast.makeText(getContext(),"Only Alphabets are allowed",Toast.LENGTH_SHORT).show();
+                }
                 else {
                     String input_string=input_et.getText().toString();
                     String key_string=key_et.getText().toString();
                     HillCipher obj = new HillCipher();
                     double sq = Math.sqrt(key_string.length());
-                    if (sq != (long) sq)
+                    if (sq != (long) sq) {
                         output_tv.setText("Invalid key length!!! Does not form a square matrix...");
+                        flag = false;
+                    }
                     else
                     {
                         int s = (int) sq;
@@ -101,8 +109,12 @@ public class Sym_Hill_Fragment extends Fragment {
                         {
                             copy_1=obj.cofact(obj.keymatrix, s);
                             obj.check(copy_1, s);
-                            copy=obj.divide(input_string, s);
+                            copy=obj.divide(input_string, s).substring(0,input_string.length() - extraChars);
                             output_tv.setText("CipherText : "+copy+"\nInverseKey : "+copy_1);
+                        }
+                        else {
+                            output_tv.setText("Key Inverse is not possible. Try another key...");
+                            flag = false;
                         }
                     }
                 }
@@ -155,8 +167,9 @@ class HillCipher {
         if (temp.length() == s)
             ans=ans+perform(temp);
         else if (temp.length() < s) {
-            for (int i = temp.length(); i < s; i++)
-                temp = temp + 'x';
+            for (int i = temp.length(); i < s; i++) {
+                temp = temp + 'X';
+            }
             ans=ans+perform(temp);
         }
         return ans;

@@ -22,7 +22,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/plaintext_label"
-            android:hint="Enter Plaintext/Ciphertext Value" />
+            android:hint="Enter Plaintext/Ciphertext Value"
+            android:inputType="textCapCharacters" />
 
         <TextView
             android:id="@+id/key_label"
@@ -41,7 +42,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/key_label"
             android:hint="Enter Key Value"
-            android:inputType="number" />
+            android:inputType="textCapCharacters" />
 
         <Button
             style="@style/Widget.AppCompat.Button.Colored"
