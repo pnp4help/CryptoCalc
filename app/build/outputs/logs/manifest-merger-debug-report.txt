@@ -51,7 +51,7 @@ MERGED from [com.android.support.constraint:constraint-layout:1.1.2] C:\Users\Ad
 	tools:ignore
 		ADDED from E:\A-Review-Project-PNP\Crypto-SVS-Jan-2019\Crypto\app\src\main\AndroidManifest.xml:12:9-48
 	android:roundIcon
-		ADDED from E:\A-Review-Project-PNP\Crypto-SVS-Jan-2019\Crypto\app\src\main\AndroidManifest.xml:9:9-54
+		ADDED from E:\A-Review-Project-PNP\Crypto-SVS-Jan-2019\Crypto\app\src\main\AndroidManifest.xml:9:9-48
 	android:icon
 		ADDED from E:\A-Review-Project-PNP\Crypto-SVS-Jan-2019\Crypto\app\src\main\AndroidManifest.xml:7:9-46
 	android:allowBackup

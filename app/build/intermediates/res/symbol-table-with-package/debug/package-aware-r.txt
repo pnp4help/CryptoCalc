@@ -1153,7 +1153,7 @@ layout sym_hill
 layout symmetric_fragment
 menu drawer_menu
 mipmap ic_launcher
-mipmap ic_launcher_round
+mipmap ic_launcher_foreground
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
