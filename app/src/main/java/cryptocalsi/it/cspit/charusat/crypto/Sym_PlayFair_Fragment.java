@@ -46,25 +46,18 @@ public class Sym_PlayFair_Fragment extends Fragment {
                 if (input_et.getText().toString().equals("")||key_et.getText().toString().equals("")){
                     Toast.makeText(getContext(),"Please Enter Appropriate Value",Toast.LENGTH_SHORT).show();
                 }
+                else if(!input_et.getText().toString().matches("[A-Z]+") || !key_et.getText().toString().matches("[A-Z]+")){
+                    Toast.makeText(getContext(),"Only Alphabets are allowed",Toast.LENGTH_SHORT).show();
+                }
                 else {
                     PlayfairCipher x=new PlayfairCipher();
                     String input_string=input_et.getText().toString();
                     String key_string=key_et.getText().toString();
                     x.setKey(key_string);
                     x.KeyGen();
-                    if (input_string.length() % 2 == 0)
-                    {
-                        String Encryptedtext=x.encryptMessage(input_string);
-                        copy=Encryptedtext;
-                        output_tv.setText("CipherText : "+Encryptedtext);
-                    }
-                    else
-                    {
-                        input_string+='x';
-                        String Encryptedtext=x.encryptMessage(input_string);
-                        copy=Encryptedtext;
-                        output_tv.setText("CipherText : "+Encryptedtext);
-                    }
+                    String Encryptedtext=x.encryptMessage(input_string);
+                    copy=Encryptedtext;
+                    output_tv.setText("CipherText : "+Encryptedtext);
                 }
             }
         });
@@ -76,25 +69,18 @@ public class Sym_PlayFair_Fragment extends Fragment {
                 if (input_et.getText().toString().equals("")||key_et.getText().toString().equals("")){
                     Toast.makeText(getContext(),"Please Enter Appropriate Value",Toast.LENGTH_SHORT).show();
                 }
+                else if(!input_et.getText().toString().matches("[A-Z]+") || !key_et.getText().toString().matches("[A-Z]+")){
+                    Toast.makeText(getContext(),"Only Alphabets are allowed",Toast.LENGTH_SHORT).show();
+                }
                 else {
                     PlayfairCipher x=new PlayfairCipher();
                     String input_string=input_et.getText().toString();
                     String key_string=key_et.getText().toString();
                     x.setKey(key_string);
                     x.KeyGen();
-                    if (input_string.length() % 2 == 0)
-                    {
-                        String decryptext=x.decryptMessage(input_string);
-                        copy=decryptext;
-                        output_tv.setText("PlainText : "+decryptext);
-                    }
-                    else
-                    {
-                        input_string+='x';
-                        String decrypttext=x.encryptMessage(input_string);
-                        copy=decrypttext;
-                        output_tv.setText("PlainText : "+decrypttext);
-                    }
+                    String decryptext=x.decryptMessage(input_string);
+                    copy=decryptext;
+                    output_tv.setText("PlainText : "+decryptext);
                 }
             }
         });
@@ -119,7 +105,8 @@ class PlayfairCipher
 {
     private String KeyWord;
     private String Key;
-    private char   matrix_arr[][] = new char[5][5];
+    private char matrix_arr[][] = new char[5][5];
+    private static boolean lastFiller = false;
 
     public void setKey(String k)
     {
@@ -149,8 +136,8 @@ class PlayfairCipher
         Key = KeyWord;
         for (int i = 0; i < 26; i++)
         {
-            current = (char) (i + 97);
-            if (current == 'j')
+            current = (char) (i + 65);
+            if (current == 'J')
                 continue;
             for (int j = 0; j < KeyWord.length(); j++)
             {
@@ -190,19 +177,24 @@ class PlayfairCipher
         len = old_text.length();
         for (int tmp = 0; tmp < len; tmp++)
         {
-            if (old_text.charAt(tmp) == 'j')
+            if (old_text.charAt(tmp) == 'J')
             {
-                text = text + 'i';
+                text = text + 'I';
             }
             else
                 text = text + old_text.charAt(tmp);
         }
-        len = text.length();
-        for (i = 0; i < len; i = i + 2)
+        for (i = 0; i < text.length(); i = i + 2)
         {
-            if (text.charAt(i + 1) == text.charAt(i))
-            {
-                text = text.substring(0, i + 1) + 'x' + text.substring(i + 1);
+            try {
+                if (text.charAt(i + 1) == text.charAt(i))
+                {
+                    text = text.substring(0, i + 1) + 'X' + text.substring(i + 1);
+                }
+            }
+            catch (StringIndexOutOfBoundsException s) {
+                text += 'X';
+                lastFiller = true;
             }
         }
         return text;
@@ -215,7 +207,8 @@ class PlayfairCipher
         if (size % 2 != 0)
         {
             size++;
-            Original = Original + 'x';
+            Original = Original + 'X';
+            PlayfairCipher.lastFiller = true;
         }
         String x[] = new String[size / 2];
         int counter = 0;
@@ -230,8 +223,8 @@ class PlayfairCipher
     public int[] GetDiminsions(char letter)
     {
         int[] key = new int[2];
-        if (letter == 'j')
-            letter = 'i';
+        if (letter == 'J')
+            letter = 'I';
         for (int i = 0; i < 5; i++)
         {
             for (int j = 0; j < 5; j++)
@@ -339,6 +332,20 @@ class PlayfairCipher
             }
             Original = Original + matrix_arr[part1[0]][part1[1]]
                     + matrix_arr[part2[0]][part2[1]];
+        }
+        for(int i = 1; i < Original.length(); i++){
+            try{
+                if((Original.charAt(i) == 'X') && (Original.charAt(i-1) == Original.charAt(i+1))){
+                    Original = Original.substring(0,i) + Original.substring(i+1, Original.length());
+                }
+            }
+            catch(StringIndexOutOfBoundsException s){
+
+            }
+        }
+        if(lastFiller){
+            Original = Original.substring(0, Original.length() - 1);
+            lastFiller = false;
         }
         return Original;
     }

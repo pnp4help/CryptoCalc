@@ -2,18 +2,18 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
    >
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         >
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp"
+
             android:gravity="center">
 
             <TextView
@@ -273,7 +273,7 @@
                 android:layout_below="@+id/txt_29"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="4dp"
-                android:text="Multipliactive Inverse"
+                android:text="Multiplicative Inverse"
                 android:textColor="#000000"
                 android:textSize="16sp" />
 

@@ -841,6 +841,7 @@ id beginning
 id blocking
 id bottom
 id buttonPanel
+id button_calculate
 id button_crt
 id button_decryption
 id button_encryption
@@ -918,6 +919,8 @@ id media_actions
 id message
 id middle
 id mini
+id mod_input
+id mod_label
 id multiply
 id nav_Asymmetric
 id nav_Feedback
@@ -1142,6 +1145,7 @@ layout notification_template_part_chronometer
 layout notification_template_part_time
 layout other_crt
 layout other_fragment
+layout other_square_multiply
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material

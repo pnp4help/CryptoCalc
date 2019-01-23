@@ -22,13 +22,14 @@ import java.util.Objects;
 public class Oth_square_multiply_fragment extends Fragment {
 
   TextView temp;
-  EditText num1_et,num2_et;
-  BigInteger num1;
+  EditText num1_et,num2_et,num3_et;
+  BigInteger num1,num3;
+  Button calculate;
   int num2;
 
   public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
     getActionBar().setTitle("Square and Multiply");
-    return inflater.inflate(R.layout.sym_1_2_4_5_6_7_8,container,false);
+    return inflater.inflate(R.layout.other_square_multiply,container,false);
   }
 
   @Override
@@ -36,37 +37,28 @@ public class Oth_square_multiply_fragment extends Fragment {
       InputFilterMinMax filter1 = new InputFilterMinMax("0", "1000000000") {};
       InputFilterMinMax filter2 = new InputFilterMinMax("0", "10000") {};
 
-
-
-    ImageView imageView=(ImageView)view.findViewById(R.id.swap);
-    imageView.setVisibility(View.GONE);
     temp=(TextView)view.findViewById(R.id.plaintext_label);
-    temp.setText("Number :");
     temp=(TextView)view.findViewById(R.id.key_label);
-    temp.setText("Power :");
     temp=(TextView)view.findViewById(R.id.output);
     num1_et=(EditText)view.findViewById(R.id.plaintext_input);
     num1_et.setFilters(new InputFilter[]{filter1});
-    num1_et.setHint("Enter Number");
     num1_et.setInputType(InputType.TYPE_CLASS_NUMBER);
     num2_et=(EditText)view.findViewById(R.id.key_input);
     num2_et.setFilters(new InputFilter[]{filter2});
-    num2_et.setHint("Enter Power ");
-    Button chk_prime=(Button)view.findViewById(R.id.button_decryption);
-    chk_prime.setVisibility(View.GONE);
-    chk_prime=(Button)view.findViewById(R.id.button_encryption);
-    chk_prime.setText("CALCULATE");
-    chk_prime.setOnClickListener(new View.OnClickListener() {
+    num3_et = (EditText)view.findViewById(R.id.mod_input);
+    num3_et.setFilters(new InputFilter[]{filter1});
+    calculate = (Button)view.findViewById(R.id.button_calculate);
+    calculate.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
         if(num1_et.getText().toString().equals("")||num2_et.getText().toString().equals("")){
           Toast.makeText(getContext(),"Please Enter Appropriate Value",Toast.LENGTH_SHORT).show();
         }
         else {
-          num1=BigInteger.valueOf(Long.valueOf(num1_et.getText().toString()));
-          num2=Integer.valueOf(num2_et.getText().toString());
-          temp.setText("Answer : "+String.valueOf(squareAndMultiply(num1,num2)));
-
+          num1 = new BigInteger(num1_et.getText().toString());
+          num2 = Integer.valueOf(num2_et.getText().toString());
+          num3 = new BigInteger(num3_et.getText().toString());
+          temp.setText("Answer : "+String.valueOf(squareAndMultiply(num1,num2).mod(num3)));
         }
       }
     });
