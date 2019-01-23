@@ -25,7 +25,7 @@ Hashing Algorithms>
   GCD Euclidian,
   Modulus,
   Prime,
-  Multipliactive Inverse,
+  Multiplicative Inverse,
   Miller Rabin Inverse,
   Chinese Remainder,
   Square and Multiply
