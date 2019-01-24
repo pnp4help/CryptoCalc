@@ -106,6 +106,7 @@ class PlayfairCipher
     private String KeyWord;
     private String Key;
     private char matrix_arr[][] = new char[5][5];
+    private static char filler = 'X';
     private static boolean lastFiller = false;
 
     public void setKey(String k)
@@ -189,11 +190,11 @@ class PlayfairCipher
             try {
                 if (text.charAt(i + 1) == text.charAt(i))
                 {
-                    text = text.substring(0, i + 1) + 'X' + text.substring(i + 1);
+                    text = text.substring(0, i + 1) + filler + text.substring(i + 1);
                 }
             }
             catch (StringIndexOutOfBoundsException s) {
-                text += 'X';
+                text += filler;
                 lastFiller = true;
             }
         }
@@ -207,7 +208,7 @@ class PlayfairCipher
         if (size % 2 != 0)
         {
             size++;
-            Original = Original + 'X';
+            Original = Original + filler;
             PlayfairCipher.lastFiller = true;
         }
         String x[] = new String[size / 2];
@@ -242,6 +243,10 @@ class PlayfairCipher
 
     public String encryptMessage(String Source)
     {
+        if(Source.length() % 2 != 0 && Source.charAt(Source.length() - 1) == 'X'){
+            filler = 'Q';
+        }
+
         String src_arr[] = Divid2Pairs(Source);
         String Code = new String();
         char one;
@@ -335,7 +340,7 @@ class PlayfairCipher
         }
         for(int i = 1; i < Original.length(); i++){
             try{
-                if((Original.charAt(i) == 'X') && (Original.charAt(i-1) == Original.charAt(i+1))){
+                if((Original.charAt(i) == filler) && (Original.charAt(i-1) == Original.charAt(i+1))){
                     Original = Original.substring(0,i) + Original.substring(i+1, Original.length());
                 }
             }
