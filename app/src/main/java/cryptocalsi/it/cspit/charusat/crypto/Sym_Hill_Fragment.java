@@ -16,6 +16,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.math.BigInteger;
 import java.util.Objects;
 
 
@@ -110,7 +111,7 @@ public class Sym_Hill_Fragment extends Fragment {
                             copy_1=obj.cofact(obj.keymatrix, s);
                             obj.check(copy_1, s);
                             copy=obj.divide(input_string, s).substring(0,input_string.length() - extraChars);
-                            output_tv.setText("CipherText : "+copy+"\nInverseKey : "+copy_1);
+                            output_tv.setText("PlainText : "+copy+"\nInverseKey : "+copy_1);
                         }
                         else {
                             output_tv.setText("Key Inverse is not possible. Try another key...");
@@ -155,9 +156,11 @@ class HillCipher {
     int keymatrix[][];
     int linematrix[];
     int resultmatrix[];
-    TextView output_tv;
 
     public String divide(String temp, int s) {
+        /*Function is used to divide the input string so that it can be multiply with keymatrix and divided part is passed
+         to perform function with will convert it into matrix and after that multiply this matrix to keymatrix and obtain
+         the result of only divided part*/
         String ans="";
         while (temp.length() > s) {
             String sub = temp.substring(0, s);
@@ -176,12 +179,14 @@ class HillCipher {
     }
 
     public String perform(String line) {
+        /*Convert the line into matrix and multiply with key and produce the result*/
         linetomatrix(line);
         linemultiplykey(line.length());
         return result(line.length());
     }
 
     public void keytomatrix(String key, int len) {
+        /*Function to change key into matrix*/
         keymatrix = new int[len][len];
         int c = 0;
         for (int i = 0; i < len; i++) {
@@ -193,6 +198,7 @@ class HillCipher {
     }
 
     public void linetomatrix(String line) {
+        /*COnverting string line into matrix*/
         linematrix = new int[line.length()];
         for (int i = 0; i < line.length(); i++) {
             linematrix[i] = ((int) line.charAt(i)) - 65;
@@ -200,16 +206,18 @@ class HillCipher {
     }
 
     public void linemultiplykey(int len) {
+        /*Multiply line with key matrix and modulo it with 26*/
         resultmatrix = new int[len];
         for (int i = 0; i < len; i++) {
             for (int j = 0; j < len; j++) {
-                resultmatrix[i] += keymatrix[i][j] * linematrix[j];
+                resultmatrix[i] += keymatrix[j][i] * linematrix[j];
             }
             resultmatrix[i] %= 26;
         }
     }
 
     public String result(int len) {
+        /*Generating result from resultmatrix*/
         String result = "";
         for (int i = 0; i < len; i++) {
             result += (char) (resultmatrix[i] + 65);
@@ -218,6 +226,8 @@ class HillCipher {
     }
 
     public boolean check(String key, int len) {
+        /*Function to convert key into matrix using keytomatrix function and find determinant of that matrix and checking if
+         inverse of that key exist or not */
         keytomatrix(key, len);
         int d = determinant(keymatrix, len);
         d = d % 26;
@@ -233,12 +243,14 @@ class HillCipher {
     }
 
     public int determinant(int A[][], int N) {
+        /*Function to find the determinant of key*/
         int res;
         if (N == 1)
             res = A[0][0];
         else if (N == 2) {
             res = A[0][0] * A[1][1] - A[1][0] * A[0][1];
-        } else {
+        }
+        else {
             res = 0;
             for (int j1 = 0; j1 < N; j1++) {
                 int m[][] = new int[N - 1][N - 1];
@@ -259,6 +271,7 @@ class HillCipher {
     }
 
     public String cofact(int num[][], int f) {
+        /*Finding Cofactor */
         int b[][], fac[][];
         b = new int[f][f];
         fac = new int[f][f];
@@ -288,15 +301,15 @@ class HillCipher {
     }
 
     String trans(int fac[][], int r) {
+        /*Transform of cofactor matrix which will give adjoint of matrix and multiply with multiplicativeInverse to give
+         inverse of matrix */
         int i, j;
         int b[][], inv[][];
         b = new int[r][r];
         inv = new int[r][r];
         int d = determinant(keymatrix, r);
-        int mi = mi(d % 26);
-        mi %= 26;
-        if (mi < 0)
-            mi += 26;
+        BigInteger temp = (BigInteger.valueOf(d)).modInverse(BigInteger.valueOf(26));
+        int mi = temp.intValue();
         for (i = 0; i < r; i++) {
             for (j = 0; j < r; j++) {
                 b[i][j] = fac[j][i];
@@ -315,25 +328,8 @@ class HillCipher {
         return matrixtoinvkey(inv, r);
     }
 
-    public int mi(int d) {
-        int q, r1, r2, r, t1, t2, t;
-        r1 = 26;
-        r2 = d;
-        t1 = 0;
-        t2 = 1;
-        while (r1 != 1 && r2 != 0) {
-            q = r1 / r2;
-            r = r1 % r2;
-            t = t1 - (t2 * q);
-            r1 = r2;
-            r2 = r;
-            t1 = t2;
-            t2 = t;
-        }
-        return (t1 + t2);
-    }
-
     public String matrixtoinvkey(int inv[][], int n) {
+        /*Convert matrix into string*/
         String invkey = "";
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {

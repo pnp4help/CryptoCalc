@@ -111,6 +111,7 @@ class PlayfairCipher
 
     public void setKey(String k)
     {
+        k = k.replace('J','I');
         String K_adjust = new String();
         boolean flag = false;
         K_adjust = K_adjust + k.charAt(0);
@@ -119,6 +120,10 @@ class PlayfairCipher
             for (int j = 0; j < K_adjust.length(); j++)
             {
                 if (k.charAt(i) == K_adjust.charAt(j))
+                {
+                    flag = true;
+                }
+                else if(k.charAt(i) == 'I' && K_adjust.charAt(j) == 'I')
                 {
                     flag = true;
                 }

@@ -41,7 +41,7 @@ public class Oth_multiplicative_inverse_fragment extends Fragment {
         temp=(TextView)view.findViewById(R.id.output);
         num1_et=(EditText)view.findViewById(R.id.plaintext_input);
         num1_et.setHint("Enter Number");
-        num1_et.setInputType(InputType.TYPE_CLASS_NUMBER);
+        num1_et.setInputType(InputType.TYPE_NUMBER_FLAG_SIGNED | InputType.TYPE_CLASS_NUMBER);
         num2_et=(EditText)view.findViewById(R.id.key_input);
         num2_et.setHint("Enter Mod Inverse Number");
         Button mod_inv=(Button)view.findViewById(R.id.button_decryption);
@@ -64,26 +64,10 @@ public class Oth_multiplicative_inverse_fragment extends Fragment {
                     catch(Exception e){
                         temp.setText("Inverse is not possible");
                     }
-
-
-
-                    /*num1=Long.valueOf(num1_et.getText().toString());
-                    num2=Long.valueOf(num2_et.getText().toString());
-                    temp.setText("Modular Multiplicative Inverse : "+String.valueOf(modInverse(num1,num2)));*/
-
                 }
             }
         });
 
-    }
-
-    static long modInverse(long a, long m)
-    {
-        a = a % m;
-        for (int x = 1; x < m; x++)
-            if ((a * x) % m == 1)
-                return x;
-        return 1;
     }
 
     private ActionBar getActionBar() {
