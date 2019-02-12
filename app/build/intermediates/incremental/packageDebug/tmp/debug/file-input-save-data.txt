@@ -1,0 +1,11 @@
+#Internal package file, do not edit.
+#Tue Feb 12 11:15:20 IST 2019
+1.base=E\:\\A-Review-Project-PNP\\Crypto-SVS-Jan-2019\\Crypto\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+0.baseType=DIRECTORY
+1.baseType=DIRECTORY
+count=2
+1.set=DEX
+0.path=classes.dex
+0.set=DEX
+0.base=E\:\\A-Review-Project-PNP\\Crypto-SVS-Jan-2019\\Crypto\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\1
+1.path=classes.dex
