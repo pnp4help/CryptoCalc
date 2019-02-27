@@ -179,7 +179,9 @@ attr fontProviderQuery
 attr fontStyle
 attr fontWeight
 attr foregroundInsidePadding
+attr freezesAnimation
 attr gapBetweenBars
+attr gifSource
 attr goIcon
 attr headerLayout
 attr height
@@ -198,6 +200,7 @@ attr indeterminateProgressStyle
 attr initialActivityCount
 attr insetForeground
 attr isLightTheme
+attr isOpaque
 attr itemBackground
 attr itemIconTint
 attr itemPadding
@@ -279,6 +282,7 @@ attr listPreferredItemPaddingLeft
 attr listPreferredItemPaddingRight
 attr logo
 attr logoDescription
+attr loopCount
 attr maxActionInlineWidth
 attr maxButtonHeight
 attr measureWithLargestChild
@@ -469,6 +473,7 @@ color button_material_light
 color colorAccent
 color colorPrimary
 color colorPrimaryDark
+color darkTheme
 color design_bottom_navigation_shadow_color
 color design_error
 color design_fab_shadow_end_color
@@ -489,6 +494,7 @@ color foreground_material_dark
 color foreground_material_light
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color lightTheme
 color material_blue_grey_800
 color material_blue_grey_900
 color material_blue_grey_950
@@ -767,6 +773,7 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable button
 drawable cryptography
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
@@ -774,11 +781,15 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable ic_asymmetric
 drawable ic_feedback
+drawable ic_hashing
 drawable ic_home
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable ic_other
 drawable ic_share
+drawable ic_symmetric
 drawable navigation_empty_icon
 drawable notification_action_background
 drawable notification_bg
@@ -792,6 +803,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable splash_screen
 drawable swap
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -799,12 +811,12 @@ id ALT
 id CTRL
 id FUNCTION
 id META
-id Number_1
-id Number_2
-id Number_3
-id Remainder_1
-id Remainder_2
-id Remainder_3
+id Number_1_layout
+id Number_2_layout
+id Number_3_layout
+id Remainder_1_layout
+id Remainder_2_layout
+id Remainder_3_layout
 id SHIFT
 id SYM
 id action0
@@ -905,9 +917,10 @@ id item_touch_helper_previous_elevation
 id key_input
 id key_input_1
 id key_input_2
-id key_label
-id key_label_1
-id key_label_2
+id key_input_layout
+id key_label_1_layout
+id key_label_2_layout
+id key_label_layout
 id largeLabel
 id left
 id line1
@@ -920,7 +933,7 @@ id message
 id middle
 id mini
 id mod_input
-id mod_label
+id mod_input_layout
 id multiply
 id nav_Asymmetric
 id nav_Feedback
@@ -950,11 +963,12 @@ id parent_matrix
 id percent
 id pin
 id plaintext_input
-id plaintext_label
+id plaintext_input_layout
+id plaintext_label_layout
 id primenumber_input
-id primenumber_label
+id primenumber_label_layout
 id primitive_root_input
-id primitive_root_label
+id primitive_root_label_layout
 id progress_circular
 id progress_horizontal
 id radio
@@ -1017,7 +1031,6 @@ id textView
 id textView1
 id textView2
 id textView3
-id textView4
 id text_input_password_toggle
 id textinput_counter
 id textinput_error
@@ -1060,9 +1073,9 @@ id uniform
 id up
 id useLogo
 id value_x_input
-id value_x_label
+id value_x_label_layout
 id value_y_input
-id value_y_label
+id value_y_label_layout
 id view_offset_helper
 id visible
 id withText
@@ -1208,6 +1221,7 @@ style Animation_AppCompat_Dialog
 style Animation_AppCompat_DropDownUp
 style Animation_AppCompat_Tooltip
 style Animation_Design_BottomSheetDialog
+style AppFullScreenTheme
 style AppTheme
 style AppTheme_BlueButton
 style AppTheme_NoActionBar
@@ -1495,6 +1509,7 @@ style ThemeOverlay_AppCompat_Dark_ActionBar
 style ThemeOverlay_AppCompat_Dialog
 style ThemeOverlay_AppCompat_Dialog_Alert
 style ThemeOverlay_AppCompat_Light
+style ToolbarColoredBackArrow
 style Widget_AppCompat_ActionBar
 style Widget_AppCompat_ActionBar_Solid
 style Widget_AppCompat_ActionBar_TabBar
@@ -1615,6 +1630,8 @@ styleable FloatingActionButton_Behavior_Layout behavior_autoHide
 styleable FontFamily fontProviderAuthority fontProviderCerts fontProviderFetchStrategy fontProviderFetchTimeout fontProviderPackage fontProviderQuery
 styleable FontFamilyFont android_font android_fontWeight android_fontStyle font fontStyle fontWeight
 styleable ForegroundLinearLayout android_foreground android_foregroundGravity foregroundInsidePadding
+styleable GifTextureView gifSource isOpaque
+styleable GifView freezesAnimation loopCount
 styleable LinearConstraintLayout android_orientation
 styleable LinearLayoutCompat android_gravity android_orientation android_baselineAligned android_baselineAlignedChildIndex android_weightSum divider dividerPadding measureWithLargestChild showDividers
 styleable LinearLayoutCompat_Layout android_layout_gravity android_layout_width android_layout_height android_layout_weight

@@ -588,12 +588,12 @@
         "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\d461fddb322a2a84fccb702f1c175ecd\\res\\drawable-xhdpi-v4\\abc_btn_radio_to_on_mtrl_000.png"
     },
     {
-        "merged": "E:\\A-Review-Project-PNP\\Crypto-SVS-Jan-2019\\Crypto\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
-        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\d461fddb322a2a84fccb702f1c175ecd\\res\\drawable-xxxhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png"
-    },
-    {
         "merged": "E:\\A-Review-Project-PNP\\Crypto-SVS-Jan-2019\\Crypto\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_abc_list_selector_disabled_holo_dark.9.png.flat",
         "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\d461fddb322a2a84fccb702f1c175ecd\\res\\drawable-xhdpi-v4\\abc_list_selector_disabled_holo_dark.9.png"
+    },
+    {
+        "merged": "E:\\A-Review-Project-PNP\\Crypto-SVS-Jan-2019\\Crypto\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\d461fddb322a2a84fccb702f1c175ecd\\res\\drawable-xxxhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png"
     },
     {
         "merged": "E:\\A-Review-Project-PNP\\Crypto-SVS-Jan-2019\\Crypto\\app\\build\\intermediates\\res\\merged\\release\\layout_asym_rsa.xml.flat",
@@ -784,6 +784,10 @@
         "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\111c20395c6a54cebab7945d67256961\\res\\drawable-xxxhdpi-v4\\design_ic_visibility_off.png"
     },
     {
+        "merged": "E:\\A-Review-Project-PNP\\Crypto-SVS-Jan-2019\\Crypto\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_other.xml.flat",
+        "source": "E:\\A-Review-Project-PNP\\Crypto-SVS-Jan-2019\\Crypto\\app\\src\\main\\res\\drawable\\ic_other.xml"
+    },
+    {
         "merged": "E:\\A-Review-Project-PNP\\Crypto-SVS-Jan-2019\\Crypto\\app\\build\\intermediates\\res\\merged\\release\\color_abc_primary_text_disable_only_material_light.xml.flat",
         "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\d461fddb322a2a84fccb702f1c175ecd\\res\\color\\abc_primary_text_disable_only_material_light.xml"
     },
@@ -920,6 +924,14 @@
         "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\d461fddb322a2a84fccb702f1c175ecd\\res\\drawable-hdpi-v4\\abc_ic_star_half_black_48dp.png"
     },
     {
+        "merged": "E:\\A-Review-Project-PNP\\Crypto-SVS-Jan-2019\\Crypto\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_asymmetric.xml.flat",
+        "source": "E:\\A-Review-Project-PNP\\Crypto-SVS-Jan-2019\\Crypto\\app\\src\\main\\res\\drawable\\ic_asymmetric.xml"
+    },
+    {
+        "merged": "E:\\A-Review-Project-PNP\\Crypto-SVS-Jan-2019\\Crypto\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_symmetric.xml.flat",
+        "source": "E:\\A-Review-Project-PNP\\Crypto-SVS-Jan-2019\\Crypto\\app\\src\\main\\res\\drawable\\ic_symmetric.xml"
+    },
+    {
         "merged": "E:\\A-Review-Project-PNP\\Crypto-SVS-Jan-2019\\Crypto\\app\\build\\intermediates\\res\\merged\\release\\drawable_abc_ic_menu_overflow_material.xml.flat",
         "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\d461fddb322a2a84fccb702f1c175ecd\\res\\drawable\\abc_ic_menu_overflow_material.xml"
     },
@@ -930,6 +942,10 @@
     {
         "merged": "E:\\A-Review-Project-PNP\\Crypto-SVS-Jan-2019\\Crypto\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_abc_popup_background_mtrl_mult.9.png.flat",
         "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\d461fddb322a2a84fccb702f1c175ecd\\res\\drawable-xhdpi-v4\\abc_popup_background_mtrl_mult.9.png"
+    },
+    {
+        "merged": "E:\\A-Review-Project-PNP\\Crypto-SVS-Jan-2019\\Crypto\\app\\build\\intermediates\\res\\merged\\release\\drawable_button.xml.flat",
+        "source": "E:\\A-Review-Project-PNP\\Crypto-SVS-Jan-2019\\Crypto\\app\\src\\main\\res\\drawable\\button.xml"
     },
     {
         "merged": "E:\\A-Review-Project-PNP\\Crypto-SVS-Jan-2019\\Crypto\\app\\build\\intermediates\\res\\merged\\release\\anim_abc_fade_in.xml.flat",
@@ -990,6 +1006,10 @@
     {
         "merged": "E:\\A-Review-Project-PNP\\Crypto-SVS-Jan-2019\\Crypto\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_abc_ic_star_black_16dp.png.flat",
         "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\d461fddb322a2a84fccb702f1c175ecd\\res\\drawable-xhdpi-v4\\abc_ic_star_black_16dp.png"
+    },
+    {
+        "merged": "E:\\A-Review-Project-PNP\\Crypto-SVS-Jan-2019\\Crypto\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_hashing.xml.flat",
+        "source": "E:\\A-Review-Project-PNP\\Crypto-SVS-Jan-2019\\Crypto\\app\\src\\main\\res\\drawable\\ic_hashing.xml"
     },
     {
         "merged": "E:\\A-Review-Project-PNP\\Crypto-SVS-Jan-2019\\Crypto\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
@@ -1182,6 +1202,10 @@
     {
         "merged": "E:\\A-Review-Project-PNP\\Crypto-SVS-Jan-2019\\Crypto\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4_abc_ic_star_black_36dp.png.flat",
         "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\d461fddb322a2a84fccb702f1c175ecd\\res\\drawable-xxhdpi-v4\\abc_ic_star_black_36dp.png"
+    },
+    {
+        "merged": "E:\\A-Review-Project-PNP\\Crypto-SVS-Jan-2019\\Crypto\\app\\build\\intermediates\\res\\merged\\release\\drawable-v24_splash_screen.gif.flat",
+        "source": "E:\\A-Review-Project-PNP\\Crypto-SVS-Jan-2019\\Crypto\\app\\src\\main\\res\\drawable-v24\\splash_screen.gif"
     },
     {
         "merged": "E:\\A-Review-Project-PNP\\Crypto-SVS-Jan-2019\\Crypto\\app\\build\\intermediates\\res\\merged\\release\\drawable_abc_ic_go_search_api_material.xml.flat",

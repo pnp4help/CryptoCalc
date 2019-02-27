@@ -7,6 +7,7 @@ INJECTED from E:\A-Review-Project-PNP\Crypto-SVS-Jan-2019\Crypto\app\src\main\An
 MERGED from [com.android.support:design:27.1.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\111c20395c6a54cebab7945d67256961\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\d461fddb322a2a84fccb702f1c175ecd\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support.constraint:constraint-layout:1.1.2] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.2.aar\6585f398f61d34e3a7527fed91520197\AndroidManifest.xml:2:1-11:12
+MERGED from [pl.droidsonroids.gif:android-gif-drawable:1.2.16] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\android-gif-drawable-1.2.16.aar\10cf07088515f72a2791290926c37e97\AndroidManifest.xml:2:1-10:12
 MERGED from [com.android.support:support-v4:27.1.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\114e14e779b92023eab1bcf07d94e829\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\d639123e8e6e5a97f545d518553ca56b\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\51e1da0dad99ad19c1fd1566ece12597\AndroidManifest.xml:17:1-22:12
@@ -98,6 +99,8 @@ MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\Administrator\.gr
 MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\d461fddb322a2a84fccb702f1c175ecd\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support.constraint:constraint-layout:1.1.2] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.2.aar\6585f398f61d34e3a7527fed91520197\AndroidManifest.xml:5:5-7:41
 MERGED from [com.android.support.constraint:constraint-layout:1.1.2] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.2.aar\6585f398f61d34e3a7527fed91520197\AndroidManifest.xml:5:5-7:41
+MERGED from [pl.droidsonroids.gif:android-gif-drawable:1.2.16] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\android-gif-drawable-1.2.16.aar\10cf07088515f72a2791290926c37e97\AndroidManifest.xml:6:5-8:41
+MERGED from [pl.droidsonroids.gif:android-gif-drawable:1.2.16] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\android-gif-drawable-1.2.16.aar\10cf07088515f72a2791290926c37e97\AndroidManifest.xml:6:5-8:41
 MERGED from [com.android.support:support-v4:27.1.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\114e14e779b92023eab1bcf07d94e829\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-v4:27.1.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\114e14e779b92023eab1bcf07d94e829\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\d639123e8e6e5a97f545d518553ca56b\AndroidManifest.xml:20:5-44
