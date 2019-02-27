@@ -3,6 +3,7 @@ package cryptocalsi.it.cspit.charusat.crypto;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBar;
 import android.text.InputFilter;
@@ -21,6 +22,7 @@ import java.util.Objects;
 public class Sym_AutoKey_Fragment extends Fragment {
 
     private static String alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    TextInputLayout til;
     EditText input,key_et;
     TextView output_tv;
     String copy;
@@ -36,12 +38,11 @@ public class Sym_AutoKey_Fragment extends Fragment {
 
         input=(EditText)view.findViewById(R.id.plaintext_input);
         input.setFilters(new InputFilter[]{new InputFilter.AllCaps()});
-        TextView setKeyTitle=(TextView)view.findViewById(R.id.key_label);
-        setKeyTitle.setText("AutoKey : ");
         key_et=(EditText)view.findViewById(R.id.key_input);
-        key_et.setHint("Enter AutoKey Value");
         key_et.setInputType(InputType.TYPE_CLASS_TEXT);
         key_et.setFilters(new InputFilter[]{new InputFilter.AllCaps()});
+        til = (TextInputLayout)view.findViewById(R.id.key_input_layout);
+        til.setHint("Enter AutoKey Value");
         output_tv=(TextView)view.findViewById(R.id.output);
 
         Button encryption=(Button)view.findViewById(R.id.button_encryption);

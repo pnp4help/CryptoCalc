@@ -3,6 +3,5 @@
   <string name="app_name">CryptoCalc</string>
   <string name="navigation_drawer_open">Open navigation drawer</string>
   <string name="navigation_drawer_close">Close navigation drawer</string>
-  <string name="madeby">Made By : \n15IT146 Shalin \n15IT150 VishwarajSinh \n16IT005 Dhaval \n 16IT043 Smit \nPritesh Prajapati \nParth Shah  </string>
-
+  <string name="madeby">15IT146 Shalin \n15IT150 VishwarajSinh \n16IT005 Dhaval \n 16IT043 Smit \nPritesh Prajapati \nParth Shah  </string>
 </resources>

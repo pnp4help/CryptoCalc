@@ -3,8 +3,10 @@ package cryptocalsi.it.cspit.charusat.crypto;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBar;
+import android.text.InputFilter;
 import android.text.InputType;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,7 +22,7 @@ import java.util.Objects;
 
 public class Oth_modulus_fragment extends Fragment {
 
-
+    TextInputLayout til;
     TextView temp;
     EditText num1_et,num2_et;
     BigInteger n1,n2;
@@ -35,16 +37,15 @@ public class Oth_modulus_fragment extends Fragment {
 
         ImageView imageView=(ImageView)view.findViewById(R.id.swap);
         imageView.setVisibility(View.GONE);
-        temp=(TextView)view.findViewById(R.id.plaintext_label);
-        temp.setText("Number :");
-        temp=(TextView)view.findViewById(R.id.key_label);
-        temp.setText("Mod :");
         temp=(TextView)view.findViewById(R.id.output);
         num1_et=(EditText)view.findViewById(R.id.plaintext_input);
-        num1_et.setHint("Enter Number");
         num1_et.setInputType(InputType.TYPE_CLASS_NUMBER);
+        til = (TextInputLayout)view.findViewById(R.id.plaintext_input_layout);
+        til.setHint("Enter Number");
         num2_et=(EditText)view.findViewById(R.id.key_input);
-        num2_et.setHint("Enter Mod");
+        num2_et.setFilters(new InputFilter[]{new InputFilterMinMax("1", "1000000000")});
+        til = (TextInputLayout)view.findViewById(R.id.key_input_layout);
+        til.setHint("Enter Mod");
         Button mod=(Button)view.findViewById(R.id.button_decryption);
         mod.setVisibility(View.GONE);
         mod=(Button)view.findViewById(R.id.button_encryption);

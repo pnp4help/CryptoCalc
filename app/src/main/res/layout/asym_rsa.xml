@@ -1,67 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <RelativeLayout
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/plaintext_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="10dp"
-            android:text="Plaintext/Ciphertext :"
-            android:textColor="#000000"
-            android:textSize="20sp" />
 
-        <EditText
-            android:hint="Enter Plaintext/Ciphertext Value"
-            android:id="@+id/plaintext_input"
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/plaintext_label_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/plaintext_label" />
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <EditText
+                android:id="@+id/plaintext_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Plaintext/Ciphertext Value" />
+        </android.support.design.widget.TextInputLayout>
 
         <Button
-            style="@style/Widget.AppCompat.Button.Colored"
             android:id="@+id/button_encryption"
+            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="155dp"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
-            android:layout_below="@id/plaintext_input"
-            android:layout_marginTop="5dp"
-            android:text="ENCRYPTION" />
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/button"
+            android:text="ENCRYPTION"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/plaintext_label_layout" />
 
         <Button
-            style="@style/Widget.AppCompat.Button.Colored"
             android:id="@+id/button_decryption"
+            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="155dp"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:layout_below="@id/plaintext_input"
-            android:layout_marginTop="5dp"
-            android:text="DECRYPTION" />
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/button"
+            android:text="DECRYPTION"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/swap" />
 
         <TextView
+            android:id="@+id/output"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/output"
             android:layout_below="@id/button_encryption"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
             android:text="Output :"
             android:textColor="#000000"
-            android:textSize="17sp" />
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.02"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_decryption" />
 
         <ImageView
-            android:layout_width="55dp"
+            android:id="@+id/swap"
+            android:layout_width="54dp"
             android:layout_height="55dp"
             android:layout_below="@id/output"
-            android:layout_marginTop="35dp"
-            android:id="@+id/swap"
             android:layout_centerHorizontal="true"
-            android:src="@drawable/swap"/>
-    </RelativeLayout>
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:rotation="90"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_encryption"
+            app:srcCompat="@drawable/swap" />
+    </android.support.constraint.ConstraintLayout>
 </ScrollView>

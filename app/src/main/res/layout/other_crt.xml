@@ -1,144 +1,161 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <RelativeLayout
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/Number_1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="10dp"
-            android:text="Number 1:"
-            android:textColor="#000000"
-            android:textSize="20sp" />
-
-        <EditText
-            android:id="@+id/number_1_input"
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/Number_1_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/Number_1"
-            android:hint="Enter 1st number"
-            android:inputType="number" />
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/Number_2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/number_1_input"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="5dp"
-            android:text="Number 2 :"
-            android:textColor="#000000"
-            android:textSize="20sp" />
+            <EditText
+                android:id="@+id/number_1_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter 1st number"
+                android:inputType="number" />
+        </android.support.design.widget.TextInputLayout>
 
-        <EditText
-            android:id="@+id/number_2_input"
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/Number_2_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/Number_2"
-            android:hint="Enter 2nd number"
-            android:inputType="number" />
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Number_1_layout">
 
-        <TextView
-            android:id="@+id/Number_3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/number_2_input"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="5dp"
-            android:text="Number 3 :"
-            android:textColor="#000000"
-            android:textSize="20sp" />
+            <EditText
+                android:id="@+id/number_2_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter 2nd number"
+                android:inputType="number" />
+        </android.support.design.widget.TextInputLayout>
 
-        <EditText
-            android:id="@+id/number_3_input"
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/Number_3_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/Number_3"
-            android:hint="Enter 3rd number"
-            android:inputType="number" />
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Number_2_layout">
 
-        <TextView
-            android:id="@+id/Remainder_1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/number_3_input"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="5dp"
-            android:text="Remainder 1 :"
-            android:textColor="#000000"
-            android:textSize="20sp" />
+            <EditText
+                android:id="@+id/number_3_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter 3rd number"
+                android:inputType="number" />
+        </android.support.design.widget.TextInputLayout>
 
-        <EditText
-            android:id="@+id/remainder_1_input"
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/Remainder_1_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/Remainder_1"
-            android:hint="Enter 1st remainder"
-            android:inputType="number" />
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Number_3_layout">
 
-        <TextView
-            android:id="@+id/Remainder_2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/remainder_1_input"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="5dp"
-            android:text="Remainder 2 :"
-            android:textColor="#000000"
-            android:textSize="20sp" />
+            <EditText
+                android:id="@+id/remainder_1_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter 1st remainder"
+                android:inputType="number" />
+        </android.support.design.widget.TextInputLayout>
 
-        <EditText
-            android:id="@+id/remainder_2_input"
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/Remainder_2_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/Remainder_2"
-            android:hint="Enter 2nd remainder"
-            android:inputType="number" />
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Remainder_1_layout">
 
-        <TextView
-            android:id="@+id/Remainder_3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/remainder_2_input"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="5dp"
-            android:text="Remainder 3 :"
-            android:textColor="#000000"
-            android:textSize="20sp" />
+            <EditText
+                android:id="@+id/remainder_2_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter 2nd remainder"
+                android:inputType="number" />
+        </android.support.design.widget.TextInputLayout>
 
-        <EditText
-            android:id="@+id/remainder_3_input"
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/Remainder_3_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/Remainder_3"
-            android:hint="Enter 3rd remainder"
-            android:inputType="number" />
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Remainder_2_layout">
+
+            <EditText
+                android:id="@+id/remainder_3_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter 3rd remainder"
+                android:inputType="number" />
+        </android.support.design.widget.TextInputLayout>
 
         <Button
-            style="@style/Widget.AppCompat.Button.Colored"
             android:id="@+id/button_crt"
+            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="155dp"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
-            android:layout_below="@id/remainder_3_input"
-            android:layout_marginTop="5dp"
-            android:text="CRT" />
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/button"
+            android:text="CRT"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Remainder_3_layout" />
 
         <TextView
             android:id="@+id/output"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/button_crt"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="16dp"
             android:text="Output :"
             android:textColor="#000000"
-            android:textSize="17sp" />
-    </RelativeLayout>
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.02"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_crt" />
+    </android.support.constraint.ConstraintLayout>
 </ScrollView>

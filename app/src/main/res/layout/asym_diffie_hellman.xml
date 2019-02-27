@@ -1,107 +1,140 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <RelativeLayout
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/primenumber_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="10dp"
-            android:text="Prime Number :"
-            android:textColor="#000000"
-            android:textSize="20sp" />
-
-        <EditText
-            android:id="@+id/primenumber_input"
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/primenumber_label_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/primenumber_label"
-            android:hint="Enter Prime Number"
-            android:inputType="number" />
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/key_input_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.13">
 
-        <TextView
-            android:id="@+id/primitive_root_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/primenumber_input"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="5dp"
-            android:text="Base :"
-            android:textColor="#000000"
-            android:textSize="20sp" />
+            <EditText
+                android:id="@+id/primenumber_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Prime Number"
+                android:inputType="number" />
+        </android.support.design.widget.TextInputLayout>
 
-        <EditText
-            android:id="@+id/primitive_root_input"
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/primitive_root_label_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/primitive_root_label"
-            android:hint="Enter Base Number"
-            android:inputType="number" />
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/key_input_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/primenumber_label_layout"
+            app:layout_constraintVertical_bias="0.13">
 
-        <TextView
-            android:id="@+id/value_x_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/primitive_root_input"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="5dp"
-            android:text="Secret Key(Sender) :"
-            android:textColor="#000000"
-            android:textSize="20sp" />
+            <EditText
+                android:id="@+id/primitive_root_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Base Number"
+                android:inputType="number" />
+        </android.support.design.widget.TextInputLayout>
 
-        <EditText
-            android:id="@+id/value_x_input"
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/value_x_label_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/value_x_label"
-            android:hint="Enter Value of Secret Key for Sender"
-            android:inputType="number" />
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/key_input_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/primitive_root_label_layout"
+            app:layout_constraintVertical_bias="0.13">
 
-        <TextView
-            android:id="@+id/value_y_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/value_x_input"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="5dp"
-            android:text="Secret Key(Receiver) :"
-            android:textColor="#000000"
-            android:textSize="20sp" />
+            <EditText
+                android:id="@+id/value_x_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Value of Secret Key for Sender"
+                android:inputType="number" />
+        </android.support.design.widget.TextInputLayout>
 
-        <EditText
-            android:id="@+id/value_y_input"
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/value_y_label_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/value_y_label"
-            android:hint="Enter Value of Secret Key for Receiver"
-            android:inputType="number" />
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/key_input_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/value_x_label_layout"
+            app:layout_constraintVertical_bias="0.13">
+
+            <EditText
+                android:id="@+id/value_y_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Value of Secret Key for Receiver"
+                android:inputType="number" />
+        </android.support.design.widget.TextInputLayout>
+
 
         <Button
-            style="@style/Widget.AppCompat.Button.Colored"
             android:id="@+id/button_key"
+            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="155dp"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
-            android:layout_below="@id/value_y_input"
-            android:layout_marginTop="5dp"
-            android:text="KEY" />
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/button"
+            android:text="KEY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/value_y_label_layout" />
 
 
         <TextView
             android:id="@+id/output"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="32dp"
             android:layout_below="@id/button_key"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
             android:text="Output :"
             android:textColor="#000000"
-            android:textSize="17sp" />
-    </RelativeLayout>
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.02"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_key"
+            app:layout_constraintVertical_bias="0.0" />
+    </android.support.constraint.ConstraintLayout>
 </ScrollView>

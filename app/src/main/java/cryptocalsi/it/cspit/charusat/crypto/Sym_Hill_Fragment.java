@@ -35,11 +35,7 @@ public class Sym_Hill_Fragment extends Fragment {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-
-        TextView setKeyTitle=(TextView)view.findViewById(R.id.key_label);
-        setKeyTitle.setText("Matrix Value of Key : ");
         key_et=(EditText)view.findViewById(R.id.key_input);
-        key_et.setHint("Enter Key Value");
         key_et.setFilters(new InputFilter[]{new InputFilter.AllCaps()});
         input_et=(EditText)view.findViewById(R.id.plaintext_input);
         input_et.setFilters(new InputFilter[]{new InputFilter.AllCaps()});

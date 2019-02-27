@@ -10,47 +10,25 @@
       android:layout_height="wrap_content"
       android:layout_above="@+id/textView2"
       android:layout_centerHorizontal="true"
-      android:layout_marginBottom="86dp"
-      android:text="Email us @"
+      android:layout_marginBottom="42dp"
+      android:text="Made By:"
       android:textAlignment="center"
       android:textColor="#000000"
-      android:textSize="34sp" />
-
-
-  <TextView
-      android:id="@+id/textView4"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_above="@+id/textView2"
-      android:layout_centerHorizontal="true"
-      android:layout_marginBottom="20dp"
-      android:text="PRITESHPRAJAPATI.IT@CHARUSAT.AC.IN"
-      android:textAlignment="center"
-      android:textColor="#000000"
-      android:textSize="14sp" />
+      android:textSize="34sp"
+      android:visibility="visible" />
 
 
   <TextView
       android:id="@+id/textView2"
-      android:layout_width="wrap_content"
+      android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_alignStart="@+id/textView3"
-      android:layout_centerVertical="true"
-      android:text="15IT146@CHARUSAT.EDU.IN"
-      android:textAlignment="center"
-      android:textColor="#000000"
-      android:textSize="14sp" />
-
-
-  <TextView
-      android:id="@+id/textView3"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_below="@+id/textView2"
+      android:layout_alignParentBottom="true"
       android:layout_centerHorizontal="true"
-      android:layout_marginTop="22dp"
-      android:text="15IT150@CHARUSAT.EDU.IN"
+      android:layout_marginBottom="238dp"
+      android:text="@string/madeby"
       android:textAlignment="center"
       android:textColor="#000000"
-      android:textSize="14sp" />
+      android:textSize="20sp" />
+
+
 </RelativeLayout>

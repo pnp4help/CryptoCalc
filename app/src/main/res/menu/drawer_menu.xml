@@ -10,21 +10,24 @@
             android:title="Home" />
         <item
             android:id="@+id/nav_Symmetric"
+            android:icon="@drawable/ic_symmetric"
             android:title="Symmetric Algorithms" />
         <item
             android:id="@+id/nav_Asymmetric"
+            android:icon="@drawable/ic_asymmetric"
             android:title="Assymetric Algorithms" />
         <item
             android:id="@+id/nav_Hashing"
+            android:icon="@drawable/ic_hashing"
             android:title="Hashing Algorithms" />
 
         <item
             android:id="@+id/nav_Other"
+            android:icon="@drawable/ic_other"
             android:title="Other Algorithms" />
         <item
             android:id="@+id/nav_Feedback"
             android:icon="@drawable/ic_feedback"
             android:title="Feedback" />
     </group>
-
 </menu>

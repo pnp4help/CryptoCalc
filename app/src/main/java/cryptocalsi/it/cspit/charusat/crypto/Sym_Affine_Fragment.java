@@ -118,7 +118,7 @@ public class Sym_Affine_Fragment extends Fragment {
                     else{
                         for (int i = 0; i < inp.length(); i++)
                         {
-                            temp = temp + (char) (((k1_inv * ((inp.charAt(i) - 65) - k2) + 26) % 26 ) + 65);
+                            temp = temp + (char) (((k1_inv * (((inp.charAt(i) - 65) - k2) + 26)) % 26 ) + 65);
                         }
                         copy=temp;
                         output_tv.setText("PlainText : " + copy);
