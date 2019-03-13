@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Wed Mar 13 12:13:49 IST 2019
+#Wed Mar 13 12:55:08 IST 2019
 2.base=E\:\\A-Review-Project-PNP\\Crypto-Playstore-2019\\Crypto\\app\\build\\intermediates\\transforms\\stripDebugSymbol\\debug\\0
 5.set=NATIVE_RESOURCE
 0.path=lib/x86/libpl_droidsonroids_gif.so
