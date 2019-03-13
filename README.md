@@ -14,12 +14,12 @@ Asymmetric Algorithms>
   RSA Cipher
   
 Hashing Algorithms>
-  SHA-1,
-  MD5,
-  SHA-256,
-  SHA-512,
-  SHA-384,
-  SHA-224
+   MD5,
+   SHA-1,
+   SHA-224,
+   SHA-256,
+   SHA-384,
+   SHA-512
   
  Other Algorithms>
   GCD Euclidian,
