@@ -11,6 +11,7 @@ import android.text.Spanned;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -19,6 +20,8 @@ import android.widget.Toast;
 
 import java.math.BigInteger;
 import java.util.Objects;
+
+import static android.content.Context.INPUT_METHOD_SERVICE;
 
 public class Sym_Multiplicative_Fragment extends Fragment {
 
@@ -47,7 +50,12 @@ public class Sym_Multiplicative_Fragment extends Fragment {
         encryption.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                try {
+                    InputMethodManager imm = (InputMethodManager)getActivity().getSystemService(INPUT_METHOD_SERVICE);
+                    imm.hideSoftInputFromWindow(getActivity().getCurrentFocus().getWindowToken(), 0);
+                } catch (Exception e) {
+                    // TODO: handle exception
+                }
                 String input_string=input_et.getText().toString();
                 String key_string=key_et.getText().toString();
 
@@ -81,7 +89,12 @@ public class Sym_Multiplicative_Fragment extends Fragment {
         decryption.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                try {
+                    InputMethodManager imm = (InputMethodManager)getActivity().getSystemService(INPUT_METHOD_SERVICE);
+                    imm.hideSoftInputFromWindow(getActivity().getCurrentFocus().getWindowToken(), 0);
+                } catch (Exception e) {
+                    // TODO: handle exception
+                }
                 String input_string=input_et.getText().toString();
                 String key_string=key_et.getText().toString();
 
@@ -117,6 +130,12 @@ public class Sym_Multiplicative_Fragment extends Fragment {
         swap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                try {
+                    InputMethodManager imm = (InputMethodManager)getActivity().getSystemService(INPUT_METHOD_SERVICE);
+                    imm.hideSoftInputFromWindow(getActivity().getCurrentFocus().getWindowToken(), 0);
+                } catch (Exception e) {
+                    // TODO: handle exception
+                }
                 input_et.setText(copy,TextView.BufferType.EDITABLE);
             }
         });

@@ -15,6 +15,7 @@ import android.widget.ListView;
 import java.util.Objects;
 
 public class AsymmetricFragment extends Fragment {
+    private String[] asymmetric;
 
     @Nullable
     @Override
@@ -23,9 +24,9 @@ public class AsymmetricFragment extends Fragment {
         ListView listView=view.findViewById(R.id.asymmetric_listview);
 
         getActionBar().setTitle("Asymmetric Algorithms");
-        String[] asymmetric_algos={"Diffie Hellman Cipher","RSA Cipher"};
+        asymmetric=this.getContext().getResources().getStringArray(R.array.Asymmetric);
 
-        ArrayAdapter<String> stringArrayAdapter=new ArrayAdapter<String>(Objects.requireNonNull(getContext()),android.R.layout.simple_list_item_1,asymmetric_algos);
+        ArrayAdapter<String> stringArrayAdapter=new ArrayAdapter<String>(Objects.requireNonNull(getContext()),android.R.layout.simple_list_item_1,asymmetric);
         listView.setAdapter(stringArrayAdapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

@@ -1,118 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-
-  <android.support.design.widget.TextInputLayout
-      android:id="@+id/plaintext_input_layout"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+  <android.support.constraint.ConstraintLayout
       android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_marginStart="16dp"
-      android:layout_marginTop="16dp"
-      android:layout_marginEnd="16dp"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent">
+      android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/plaintext_input"
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/plaintext_input_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter Plaintext/Ciphertext Value"
-        android:inputType="textCapCharacters"
-        android:textAllCaps="true" />
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-  </android.support.design.widget.TextInputLayout>
+      <EditText
+          android:id="@+id/plaintext_input"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="Enter Plaintext/Ciphertext Value"
+          android:inputType="textCapCharacters"
+          android:textAllCaps="true" />
 
-  <android.support.design.widget.TextInputLayout
-      android:id="@+id/key_input_layout"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_below="@+id/plaintext_input_layout"
-      android:layout_marginStart="16dp"
-      android:layout_marginTop="8dp"
-      android:layout_marginEnd="16dp"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/plaintext_input_layout">
+    </android.support.design.widget.TextInputLayout>
 
-    <EditText
-        android:id="@+id/key_input"
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/key_input_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter Key Value"
-        android:inputType="number" />
+        android:layout_below="@+id/plaintext_input_layout"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/plaintext_input_layout">
 
-  </android.support.design.widget.TextInputLayout>
+      <EditText
+          android:id="@+id/key_input"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="Enter Key Value"
+          android:inputType="number" />
 
-  <Button
-      android:id="@+id/button_encryption"
-      style="@style/Widget.AppCompat.Button.Colored"
-      android:layout_width="155dp"
-      android:layout_height="wrap_content"
-      android:layout_below="@id/key_input_layout"
-      android:layout_alignParentStart="true"
-      android:layout_marginStart="8dp"
-      android:layout_marginTop="16dp"
-      android:layout_marginEnd="8dp"
-      android:background="@drawable/button"
-      android:text="ENCRYPTION"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/key_input_layout" />
+    </android.support.design.widget.TextInputLayout>
 
-  <Button
-      android:id="@+id/button_decryption"
-      style="@style/Widget.AppCompat.Button.Colored"
-      android:layout_width="155dp"
-      android:layout_height="wrap_content"
-      android:layout_below="@id/key_input_layout"
-      android:layout_alignParentEnd="true"
-      android:layout_marginStart="8dp"
-      android:layout_marginTop="24dp"
-      android:layout_marginEnd="8dp"
-      android:text="DECRYPTION"
-      android:background="@drawable/button"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/swap" />
+    <Button
+        android:id="@+id/button_encryption"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="155dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/key_input_layout"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/button"
+        android:text="ENCRYPTION"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/key_input_layout" />
 
-  <TextView
-      android:id="@+id/output"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_below="@id/button_encryption"
-      android:layout_marginStart="16dp"
-      android:layout_marginTop="8dp"
-      android:layout_marginEnd="8dp"
-      android:layout_marginBottom="8dp"
-      android:text="Output :"
-      android:textColor="#000000"
-      android:textSize="20sp"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.024"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/button_decryption"
-      app:layout_constraintVertical_bias="0.0" />
+    <Button
+        android:id="@+id/button_decryption"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="155dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/key_input_layout"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:text="DECRYPTION"
+        android:background="@drawable/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/swap" />
 
-  <ImageView
-      android:id="@+id/swap"
-      android:layout_width="55dp"
-      android:layout_height="55dp"
-      android:layout_below="@id/output"
-      android:layout_centerHorizontal="true"
-      android:layout_marginStart="8dp"
-      android:layout_marginTop="24dp"
-      android:layout_marginEnd="8dp"
-      android:rotation="90"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/button_encryption"
-      app:srcCompat="@drawable/swap" />
+    <TextView
+        android:id="@+id/output"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_encryption"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Output :"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.02"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_decryption"
+        app:layout_constraintVertical_bias="0.0" />
 
-</android.support.constraint.ConstraintLayout>
+    <ImageView
+        android:id="@+id/swap"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_below="@id/output"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:rotation="90"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_encryption"
+        app:srcCompat="@drawable/swap" />
+
+  </android.support.constraint.ConstraintLayout>
+</ScrollView>

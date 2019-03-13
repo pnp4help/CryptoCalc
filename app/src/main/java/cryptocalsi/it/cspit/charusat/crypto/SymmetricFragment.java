@@ -16,6 +16,7 @@ import java.util.Objects;
 
 public class SymmetricFragment extends Fragment {
 
+    String[] symmetric;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -23,12 +24,9 @@ public class SymmetricFragment extends Fragment {
         ListView listView=view.findViewById(R.id.symmetric_listview);
 
         getActionBar().setTitle("Symmetric Algorithms");
-        String[] symmetric_algos={"Additive Cipher","Mulplicative Cipher",
-                "Affine Cipher","Auto Key Cipher",
-                "Play Fair Cipher","Vigenere Cipher",
-                "Hill Cipher"};
+        symmetric=this.getContext().getResources().getStringArray(R.array.Symmetric);
 
-        ArrayAdapter<String> stringArrayAdapter=new ArrayAdapter<String>(Objects.requireNonNull(getContext()),android.R.layout.simple_list_item_1,symmetric_algos);
+        ArrayAdapter<String> stringArrayAdapter=new ArrayAdapter<String>(Objects.requireNonNull(getContext()),android.R.layout.simple_list_item_1,symmetric);
         listView.setAdapter(stringArrayAdapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

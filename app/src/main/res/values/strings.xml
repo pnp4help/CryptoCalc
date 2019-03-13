@@ -1,7 +1,43 @@
 <resources>
-  <string name="testTitle"><font color="#FFFFFF">Extra</font></string>
-  <string name="app_name">CryptoCalc</string>
-  <string name="navigation_drawer_open">Open navigation drawer</string>
-  <string name="navigation_drawer_close">Close navigation drawer</string>
-  <string name="madeby">15IT146 Shalin \n15IT150 VishwarajSinh \n16IT005 Dhaval \n 16IT043 Smit \nPritesh Prajapati \nParth Shah  </string>
+    <string name="testTitle"><font color="#FFFFFF">Extra</font></string>
+    <string name="app_name">CryptoCalc</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="madeby">15IT146 Shalin \n15IT150 VishwarajSinh \n16IT005 Dhaval \n 16IT043 Smit \nPritesh Prajapati \nParth Shah  </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="Symmetric">
+        <item>Additive Cipher</item>
+        <item>Multiplicative Cipher</item>
+        <item>Affine Cipher</item>
+        <item>AutoKey Cipher</item>
+        <item>PlayFair Cipher</item>
+        <item>Vigenere Cipher</item>
+        <item>Hill Cipher</item>
+    </string-array>
+
+    <string-array name="Asymmetric">
+        <item>Diffie Hellman Cipher</item>
+        <item>RSA Cipher</item>
+    </string-array>
+
+    <string-array name="Hashing">
+        <item>MD-5</item>
+        <item>SHA-1</item>
+        <item>SHA-224</item>
+        <item>SHA-256</item>
+        <item>SHA-384</item>
+        <item>SHA-512</item>
+    </string-array>
+
+    <string-array name="Other">
+        <item>GCD Euclidean</item>
+        <item>Modulus</item>
+        <item>Prime Number</item>
+        <item>Multiplicative Inverse</item>
+        <item>Miller Rabin Algorithm</item>
+        <item>Chinese Remainder Theorem</item>
+        <item>Square and Multiply</item>
+    </string-array>
 </resources>

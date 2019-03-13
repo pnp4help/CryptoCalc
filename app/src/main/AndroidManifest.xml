@@ -21,8 +21,9 @@
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".Splash_Screen"
 
+        <activity android:name=".Splash_Screen"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:configChanges="orientation"
             android:screenOrientation="portrait">
 
@@ -32,6 +33,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

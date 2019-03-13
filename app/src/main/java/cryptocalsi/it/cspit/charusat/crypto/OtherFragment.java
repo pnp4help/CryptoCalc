@@ -16,6 +16,8 @@ import java.util.Objects;
 
 public class OtherFragment extends Fragment {
 
+    String[] other;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -23,10 +25,9 @@ public class OtherFragment extends Fragment {
         ListView listView=view.findViewById(R.id.other_listview);
 
         getActionBar().setTitle("Other");
-        String[] other_algos={"GCD Euclidian","Modulus","Prime Number","Multiplicative Inverse","Miller Rabin Algorithm","Chinese Remainder Theorm",
-                "Square And Multiply"};
+        other=this.getContext().getResources().getStringArray(R.array.Other);
 
-        ArrayAdapter<String> stringArrayAdapter=new ArrayAdapter<String>(Objects.requireNonNull(getContext()),android.R.layout.simple_list_item_1,other_algos);
+        ArrayAdapter<String> stringArrayAdapter=new ArrayAdapter<String>(Objects.requireNonNull(getContext()),android.R.layout.simple_list_item_1,other);
         listView.setAdapter(stringArrayAdapter);
 
 
