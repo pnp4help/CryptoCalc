@@ -1,0 +1,7 @@
+#Thu Dec 12 10:26:35 IST 2019
+base.0=E\:\\A-Review-Project-PNP\\Crypto-Playstore-2019\\Crypto\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes.dex
+path.1=classes.dex
+renamed.1=classes2.dex
+path.0=classes.dex
+renamed.0=classes.dex
+base.1=E\:\\A-Review-Project-PNP\\Crypto-Playstore-2019\\Crypto\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out\\classes.dex

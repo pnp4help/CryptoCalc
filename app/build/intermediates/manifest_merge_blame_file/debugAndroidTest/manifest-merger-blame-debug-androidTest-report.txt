@@ -1,0 +1,33 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="Cryptography.pnp.it.cspit.charusat.test" >
+4
+5    <uses-sdk
+5-->E:\A-Review-Project-PNP\Crypto-Playstore-2019\Crypto\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger4213436669037021543.xml:5:5-74
+6        android:minSdkVersion="21"
+6-->E:\A-Review-Project-PNP\Crypto-Playstore-2019\Crypto\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger4213436669037021543.xml:5:15-41
+7        android:targetSdkVersion="28" />
+7-->E:\A-Review-Project-PNP\Crypto-Playstore-2019\Crypto\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger4213436669037021543.xml:5:42-71
+8
+9    <instrumentation
+9-->E:\A-Review-Project-PNP\Crypto-Playstore-2019\Crypto\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger4213436669037021543.xml:11:5-15:84
+10        android:name="android.support.test.runner.AndroidJUnitRunner"
+10-->E:\A-Review-Project-PNP\Crypto-Playstore-2019\Crypto\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger4213436669037021543.xml:11:22-83
+11        android:functionalTest="false"
+11-->E:\A-Review-Project-PNP\Crypto-Playstore-2019\Crypto\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger4213436669037021543.xml:14:22-52
+12        android:handleProfiling="false"
+12-->E:\A-Review-Project-PNP\Crypto-Playstore-2019\Crypto\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger4213436669037021543.xml:13:22-53
+13        android:label="Tests for Cryptography.pnp.it.cspit.charusat"
+13-->E:\A-Review-Project-PNP\Crypto-Playstore-2019\Crypto\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger4213436669037021543.xml:15:22-82
+14        android:targetPackage="Cryptography.pnp.it.cspit.charusat" />
+14-->E:\A-Review-Project-PNP\Crypto-Playstore-2019\Crypto\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger4213436669037021543.xml:12:22-80
+15
+16    <application android:debuggable="true" >
+16-->E:\A-Review-Project-PNP\Crypto-Playstore-2019\Crypto\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger4213436669037021543.xml:7:5-9:19
+16-->E:\A-Review-Project-PNP\Crypto-Playstore-2019\Crypto\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger4213436669037021543.xml:7:18-43
+17        <uses-library android:name="android.test.runner" />
+17-->E:\A-Review-Project-PNP\Crypto-Playstore-2019\Crypto\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger4213436669037021543.xml:8:9-60
+17-->E:\A-Review-Project-PNP\Crypto-Playstore-2019\Crypto\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger4213436669037021543.xml:8:23-57
+18    </application>
+19
+20</manifest>

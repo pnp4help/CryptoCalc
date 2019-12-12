@@ -14,6 +14,8 @@ import android.widget.ListView;
 
 import java.util.Objects;
 
+import static java.security.AccessController.getContext;
+
 public class HashingFragment extends Fragment {
 
     private String[] hashing;
