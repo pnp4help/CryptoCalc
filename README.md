@@ -1,4 +1,4 @@
-# CryptoCalc
+# Cryptography (CryptoCalc)
 
 Symmetric Algorithms>
   Additive Cipher,
